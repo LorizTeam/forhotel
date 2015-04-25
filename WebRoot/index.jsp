@@ -6,7 +6,7 @@
 <%@ page import ="java.util.*" %>
 <%@ page import ="java.sql.*" %>
 <!DOCTYPE html>
-<html>
+<html> 
 	<head>
 		<title> Hotel </title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
