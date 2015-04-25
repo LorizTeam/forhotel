@@ -163,7 +163,7 @@
 			</div>		
 		</div>
 		<!---------------------------3 page----------------------------------->
-
+		
 		<script src="js/jquery-1.11.2.min.js"></script>
 		<script src="fotorama.js"></script>
 		<script src="js/bootstrap.js"></script>
