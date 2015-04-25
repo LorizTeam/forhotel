@@ -6,6 +6,7 @@
   <form-beans >
     <form-bean name="indexForm" type="com.smict.struts.form.IndexForm" />
     <form-bean name="booking1Form" type="com.smict.struts.form.Booking1Form" />
+    <form-bean name="booking2Form" type="com.smict.struts.form.Booking2Form" />
 
   </form-beans>
 
@@ -35,6 +36,18 @@
       scope="request"
       type="com.smict.struts.action.Booking1Action">
       <set-property property="cancellable" value="true" />
+      
+      <forward name="room_not_empty" path="/room_not_empty.jsp" />
+      <forward name="roomempty" path="/booking2.jsp" />
+    </action>
+    <action
+      attribute="booking2Form"
+      input="/booking2.jsp"
+      name="booking2Form"
+      path="/booking2"
+      scope="request"
+      type="com.smict.struts.action.Booking2Action">
+      <set-property property="cancellable" value="false" />
     </action>
 
   </action-mappings>

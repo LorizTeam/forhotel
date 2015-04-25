@@ -1,4 +1,4 @@
-<%@ page language="java" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%> 
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
  
@@ -8,10 +8,12 @@
 	</head>
 	<body>
 		<html:form action="/booking1">
-			date_check_out : <html:text property="date_check_out"/><html:errors property="date_check_out"/><br/>
-			date_check_in : <html:text property="date_check_in"/><html:errors property="date_check_in"/><br/>
-			people_booking : <html:text property="people_booking"/><html:errors property="people_booking"/><br/>
-			<html:submit/><html:cancel/>
+			date_check_in : <html:text property="date_check_in"/>
+			date_check_out : <html:text property="date_check_out"/>
+			people_booking : <html:text property="people_booking"/>
+			<br/>
+			<br/>
+			<html:submit property ="submit" value="submit"/>
 		</html:form>
 	</body>
 </html>

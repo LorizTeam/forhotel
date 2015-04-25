@@ -21,14 +21,8 @@ public class Booking1Form extends ActionForm {
 	 * Generated fields
 	 */
 
-	/** date_check_out property */
-	private String date_check_out;
-
-	/** date_check_in property */
-	private String date_check_in;
-
-	/** people_booking property */
-	private String people_booking;
+	/** INPUT */
+	private String date_check_out,date_check_in,people_booking,submit;
 
 	/*
 	 * Generated Methods
@@ -101,5 +95,13 @@ public class Booking1Form extends ActionForm {
 	 */
 	public void setPeople_booking(String people_booking) {
 		this.people_booking = people_booking;
+	}
+
+	public String getSubmit() {
+		return submit;
+	}
+
+	public void setSubmit(String submit) {
+		this.submit = submit;
 	}
 }
