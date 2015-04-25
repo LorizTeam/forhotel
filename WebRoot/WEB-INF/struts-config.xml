@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans >
+    <form-bean name="indexForm" type="com.smict.struts.form.IndexForm" />
+    <form-bean name="booking1Form" type="com.smict.struts.form.Booking1Form" />
+
+  </form-beans>
+
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+     
+    
+    <action
+      attribute="indexForm"
+      input="/index.jsp"
+      name="indexForm"
+      path="/index"
+      scope="request"
+      type="com.smict.struts.action.IndexAction">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action path="/indexStart" type="com.smict.struts.action.IndexStartAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="success" path="/index.jsp" />
+    </action>
+    <action
+      attribute="booking1Form"
+      input="booking1.jsp"
+      name="booking1Form"
+      path="/booking1"
+      scope="request"
+      type="com.smict.struts.action.Booking1Action">
+      <set-property property="cancellable" value="true" />
+    </action>
+
+  </action-mappings>
+
+  <message-resources parameter="com.smict.struts.ApplicationResources" />
+</struts-config>
+
