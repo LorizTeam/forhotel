@@ -4,12 +4,18 @@
  */
 package com.smict.struts.action;
 
+import java.sql.SQLException;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
+
+import com.smict.struts.data.searchroomtypeid;
 import com.smict.struts.form.Booking2Form;
 
 /** 
@@ -34,10 +40,25 @@ public class Booking2Action extends Action {
 	 */
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) {
-		Booking2Form booking2Form = (Booking2Form) form;// TODO Auto-generated method stub
+		Booking2Form booking2Form = (Booking2Form) form;
+		searchroomtypeid srtid = new searchroomtypeid();
+		String forwardText = "";
+		// TODO Auto-generated method stub
 		String submit = booking2Form.getSubmit();
 		submit = submit.substring(7);
-		
-		return null;
+		String roomtype_id;
+		try {
+			roomtype_id = srtid.search_by_name(submit);
+			HttpSession session = request.getSession();
+			session.setAttribute("roomtype_id", roomtype_id);
+			forwardText = "select_room";
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return mapping.findForward(forwardText);
 	}
 }

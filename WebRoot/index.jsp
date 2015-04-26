@@ -23,7 +23,7 @@
 			</div>
 			<div class="col-md-5">
 				<div class="row text-center">
-					<a href="booking.html" class=" btn  c"> BOOK NOW </a>
+					<a href="booking1.jsp" class=" btn  c"> BOOK NOW </a>
 				</div>
 				<div class="row menu-in text-right">
 				<ul class="nav nav-pills text-right">
