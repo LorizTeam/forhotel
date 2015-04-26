@@ -17,7 +17,6 @@ import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
 import com.smict.struts.data.booking1data;
-import com.smict.struts.data.showcountries;
 import com.smict.struts.form.Booking1Form;
 import com.smict.struts.form.Booking2Form;
 
@@ -44,7 +43,6 @@ public class Booking1Action extends Action {
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) {
 		Booking1Form booking1Form = (Booking1Form) form;
-		showcountries sct = new showcountries();
 		// TODO Auto-generated method stub
 		String tcheck_in = booking1Form.getDate_check_in(),
 		tcheck_out=booking1Form.getDate_check_out(),
@@ -62,8 +60,6 @@ public class Booking1Action extends Action {
 				request.setAttribute("booking2Form", lsearchroom);
 				if (lsearchroom.size() > 0){
 					forwardText = "roomempty";
-					//List countryForm2 = sct.show_countries();
-					//request.setAttribute("countryForm2", countryForm2);
 				}else{
 					forwardText = "room_not_empty";
 				}

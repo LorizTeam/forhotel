@@ -17,7 +17,6 @@ import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
 import com.smict.struts.data.searchroomtypeid;
-import com.smict.struts.data.showcountries;
 import com.smict.struts.form.Booking2Form;
 
 /** 
@@ -44,8 +43,7 @@ public class Booking2Action extends Action {
 			HttpServletRequest request, HttpServletResponse response) {
 		Booking2Form booking2Form = (Booking2Form) form;
 		searchroomtypeid srtid = new searchroomtypeid();
-		showcountries sct = new showcountries();
-		String forwardText = "";
+		String forwardText = "";/*
 		// TODO Auto-generated method stub
 		String submit = booking2Form.getSubmit();
 		submit = submit.substring(7);
@@ -55,8 +53,6 @@ public class Booking2Action extends Action {
 			HttpSession session = request.getSession();
 			session.setAttribute("roomtype_id", roomtype_id);
 			forwardText = "select_room";
-			List countryForm2 = sct.show_countries();
-			request.setAttribute("countryForm2", countryForm2);
 			
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -64,7 +60,7 @@ public class Booking2Action extends Action {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 		return mapping.findForward(forwardText);
 	}
 }

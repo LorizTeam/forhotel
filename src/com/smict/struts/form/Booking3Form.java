@@ -48,6 +48,8 @@ public class Booking3Form extends ActionForm {
 	/** name_sure property */
 	private String name_sure;
 
+	//for finish booking
+	//private String;
 	/*
 	 * Generated Methods
 	 */
