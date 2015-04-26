@@ -6,6 +6,7 @@
 <%@ page import ="javax.servlet.http.HttpSession.*"%>
  
 <!DOCTYPE html>
+<html>
 <head>
 	<title>Room:Selection|Hotel.com</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
@@ -13,7 +14,7 @@
 	<link rel="stylesheet" href="css/style.css" />
 	<link href="css/jqu.date.css" rel="stylesheet">
 </head>
-<html>
+
 	<body class="bbg">
 		<div class="container">
 			<div class="col-md-1"> </div>

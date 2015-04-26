@@ -9,28 +9,36 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 <html>
-  <head>
-    <base href="<%=basePath%>">
-    
-    <title>My JSP 'booking2.jsp' starting page</title>
-    
-	<meta http-equiv="pragma" content="no-cache">
-	<meta http-equiv="cache-control" content="no-cache">
-	<meta http-equiv="expires" content="0">    
-	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-	<meta http-equiv="description" content="This is my page">
-	<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
-
-  </head>
-  
-  <body>
-  		<html:form action="/booking2">
-    This is my JSP page. <br>
+<head>
+	<title>Room:Selection|Hotel.com</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.css">
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+	<body class="bbg">
+		<div class="container">
+			<div class="col-md-1"> </div>
+			<div class="col-md-10 frm thumbnail">
+				<h1>btHotel.com | Booking</h1>
+				<ul class="nav nav-tabs nav-justified text-center">
+					<li ><a href="booking1.jsp">Choose a room</a></li>
+					<li class="active"><a href="#"> Enhance your stay</a></li>
+					<li class="disabled"><a href="#">Book !</a></li>
+				</ul>
+				<div class="progress">
+					<div class="progress-bar progress-bar-success" style="width: 33.7%">				
+ 					 </div>
+  					<div class="progress-bar progress-bar-striped active" 
+  					role="progressbar" aria-valuenow="34.4" aria-valuemin="0" 
+  					aria-valuemax="100" style="width: 34.4%">		
+  					</div>
+  					<div class="progress-bar progress-bar-warning" style="width: 31.9%">				
+ 					 </div>
+				</div>
+			
+				
     		<%	
     		String avail;
     		if(request.getAttribute("booking2Form") != null){
@@ -40,18 +48,67 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						Booking2Form b2f= (Booking2Form) iteritem.next();
 						avail = "Select "+b2f.getRoomtype_name();
 			%>
-				<ul>
-					<li><%=b2f.getRoom_id() %></li>
-					<li><%=b2f.getRoomtype_id() %></li>
-					<li><%=b2f.getRoomtype_name() %></li>
-				</ul>
-				
-				<html:submit property ="submit" value="<%=avail %>"/>
+			<form class="thumbnail frmbg">
+				<div class="row">
+					<div class="col-md-4">
+						<a href="#" data-toggle="modal" data-target="#<%=b2f.getRoom_id() %>" data-whatever="@getbootstrap">
+							<img src="<%=b2f.getRoomtype_picpath()%>" class="img-responsive thumbnail">
+						</a> 
+					</div>
+					<div class="col-md-8">
+						<div class="row">
+							<div class="col-md-3 text-right pad"><strong>Room No.</strong></div>
+							<div class="col-md-7 pad"><%=b2f.getRoom_id() %></div>
+						</div>
+						<div class="row">
+							<div class="col-md-3 text-right pad"><strong>Room Type.</strong></div>
+							<div class="col-md-7 pad"><%=b2f.getRoomtype_name() %></div>
+						</div>
+						<div class="row">
+							<div class="col-md-3 text-right pad"></div>
+							<div class="col-md-7 pad">
+								<button type="submit" class="btn btn-info" ><%=avail %></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			<div class="modal fade" id="<%=b2f.getRoom_id() %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+			      </div>
+			      <div class="modal-body">
+			        <form>
+			          <div class="form-group">
+			            <label for="recipient-name" class="control-label">Recipient:</label>
+			            <input type="text" class="form-control" id="recipient-name">
+			          </div>
+			          <div class="form-group">
+			            <label for="message-text" class="control-label">Message:</label>
+			            <textarea class="form-control" id="message-text"></textarea>
+			          </div>
+			        </form>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			        <button type="button" class="btn btn-primary">Send message</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>	
+			</form>
 			<%
 						}
 				}
 						
 			%>
-		</html:form>
+		
+			</div>
+		</div>
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+  		
   </body>
 </html>
