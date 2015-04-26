@@ -4,11 +4,12 @@
  */
 package com.smict.struts.action;
 
-import java.sql.SQLException;
 import java.sql.*;
 import java.util.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
@@ -47,7 +48,11 @@ public class Booking1Action extends Action {
 		gues_amount = booking1Form.getPeople_booking(),
 		submit = booking1Form.getSubmit();
 		booking1data bk1dt = new booking1data();
-		String forwardText = null;
+		String forwardText = "";
+		HttpSession session = request.getSession();
+		session.setAttribute("tcheck_in", tcheck_in);
+		session.setAttribute("tcheck_out", tcheck_out);
+		session.setAttribute("gues_amount", gues_amount);
 		if(submit != null){
 			try {
 				List lsearchroom = bk1dt.searchroom_empty(tcheck_in, tcheck_out, gues_amount);

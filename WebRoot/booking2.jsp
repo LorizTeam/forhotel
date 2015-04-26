@@ -29,21 +29,29 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
+  		<html:form action="/booking2">
     This is my JSP page. <br>
-    		<%	if(request.getAttribute("booking2Form") != null){
+    		<%	
+    		String avail;
+    		if(request.getAttribute("booking2Form") != null){
 					List lrtd = (List)request.getAttribute("booking2Form");
 					for(Iterator iteritem = lrtd.iterator();iteritem.hasNext();){
 					
 						Booking2Form b2f= (Booking2Form) iteritem.next();
+						avail = "Select "+b2f.getRoomtype_name();
 			%>
 				<ul>
 					<li><%=b2f.getRoom_id() %></li>
 					<li><%=b2f.getRoomtype_id() %></li>
+					<li><%=b2f.getRoomtype_name() %></li>
 				</ul>
+				
+				<html:submit property ="submit" value="<%=avail %>"/>
 			<%
 						}
 				}
 						
 			%>
+		</html:form>
   </body>
 </html>

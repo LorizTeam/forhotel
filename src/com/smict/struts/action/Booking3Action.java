@@ -10,16 +10,16 @@ import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import com.smict.struts.form.Booking2Form;
+import com.smict.struts.form.Booking3Form;
 
 /** 
  * MyEclipse Struts
- * Creation date: 04-25-2015
+ * Creation date: 04-26-2015
  * 
  * XDoclet definition:
- * @struts.action path="/booking2" name="booking2Form" input="/form/booking2.jsp" scope="request" validate="true"
+ * @struts.action path="/booking3" name="booking3Form" input="booking3.jsp" scope="request" validate="true"
  */
-public class Booking2Action extends Action {
+public class Booking3Action extends Action {
 	/*
 	 * Generated Methods
 	 */
@@ -34,10 +34,7 @@ public class Booking2Action extends Action {
 	 */
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) {
-		Booking2Form booking2Form = (Booking2Form) form;// TODO Auto-generated method stub
-		String submit = booking2Form.getSubmit();
-		submit = submit.substring(7);
-		
+		Booking3Form booking3Form = (Booking3Form) form;// TODO Auto-generated method stub
 		return null;
 	}
 }

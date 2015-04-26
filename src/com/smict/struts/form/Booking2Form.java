@@ -20,8 +20,11 @@ public class Booking2Form extends ActionForm {
 	/*
 	 * Generated Methods
 	 */
+	//------------------------------------------------for show
 	private String room_id,roomtype_id,roomtype_name,roomtype_desc,roomtype_detail,roomtype_single_bed,roomtype_double_bed,roomtype_guest,roomtype_price;
 
+	//------------------------------------------------for input
+	private String submit ;
 	//Constructor
 	public Booking2Form() {};
 	
@@ -131,5 +134,13 @@ public class Booking2Form extends ActionForm {
 
 	public void setRoomtype_price(String roomtypePrice) {
 		roomtype_price = roomtypePrice;
+	}
+
+	public String getSubmit() {
+		return submit;
+	}
+
+	public void setSubmit(String submit) {
+		this.submit = submit;
 	}
 }
