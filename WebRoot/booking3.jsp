@@ -8,10 +8,11 @@
 
 <html> 
 	<head>
-		<title>JSP for Booking3Form form</title>
+		<title></title>
 	</head>
 	<body>
 		<html:form action="/booking3">
+			<html:hidden property="room_id" value="<%=request.getParameter("room_id") %>"/>
 			<Strong>Guest Detail</Strong><br/>
 			title : <html:text property="title"/><html:errors property="title"/><br/>
 			name_sure : <html:text property="name_sure"/><html:errors property="name_sure"/><br/>
