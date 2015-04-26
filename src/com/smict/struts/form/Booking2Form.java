@@ -21,7 +21,7 @@ public class Booking2Form extends ActionForm {
 	 * Generated Methods
 	 */
 	//------------------------------------------------for show
-	private String room_id,roomtype_id,roomtype_name,roomtype_desc,roomtype_detail,roomtype_single_bed,roomtype_double_bed,roomtype_guest,roomtype_price;
+	private String room_id,roomtype_id,roomtype_name,roomtype_desc,roomtype_detail,roomtype_single_bed,roomtype_double_bed,roomtype_guest,roomtype_price,pic_status,roomtype_picpath;
 
 	//------------------------------------------------for input
 	private String submit ;
@@ -30,7 +30,7 @@ public class Booking2Form extends ActionForm {
 	
 	public Booking2Form(String s1, String s2, String s3,
 			String s4, String s5, String d1,
-			String i1, String i2, String i3) {
+			String i1, String i2, String i3,String i4,String i5) {
 		// TODO Auto-generated constructor stub
 		this.room_id= s1;
 		this.roomtype_id = s2;
@@ -41,6 +41,8 @@ public class Booking2Form extends ActionForm {
 		this.roomtype_double_bed = i2;
 		this.roomtype_guest = i3;
 		this.roomtype_price = d1;
+		this.pic_status = i4;
+		this.roomtype_picpath = i5;
 	}
 
 	/** 
@@ -142,5 +144,21 @@ public class Booking2Form extends ActionForm {
 
 	public void setSubmit(String submit) {
 		this.submit = submit;
+	}
+
+	public String getPic_status() {
+		return pic_status;
+	}
+
+	public void setPic_status(String picStatus) {
+		pic_status = picStatus;
+	}
+
+	public String getRoomtype_picpath() {
+		return roomtype_picpath;
+	}
+
+	public void setRoomtype_picpath(String roomtypePicpath) {
+		roomtype_picpath = roomtypePicpath;
 	}
 }
