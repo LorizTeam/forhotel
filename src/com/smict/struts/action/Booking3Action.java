@@ -14,9 +14,10 @@ import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
+
+import com.smict.struts.data.booking3data;
 import com.smict.struts.form.Booking3Form;
-import java.util.*;
-import java.sql.*;
+
 
 /** 
  * MyEclipse Struts
@@ -44,7 +45,8 @@ public class Booking3Action extends Action {
 		HttpSession session = request.getSession();
 		// TODO Auto-generated method stub
 		
-		String room_id = (String) session.getAttribute("room_id"),
+		//for booking_table
+		String room_id = booking3Form.getRoom_id(),
 		check_in = (String) session.getAttribute("tcheck_in"),
 		check_out = (String) session.getAttribute("tcheck_out"),
 		guest_amount = (String) session.getAttribute("gues_amount"),
@@ -53,7 +55,23 @@ public class Booking3Action extends Action {
 		cus_email = booking3Form.getEmail(),
 		cus_intercode = booking3Form.getIntercode(),
 		cus_phonenum = booking3Form.getPhonenum(),
-		cus_country = booking3Form.getCountry();
+		cus_country = booking3Form.getCountry(),
+		
+		//for occupancy_table
+		oc_title = booking3Form.getOc_title(),
+		oc_name_sure = booking3Form.getOc_name_sure(),
+		//for _table
+		special_request =booking3Form.getSpecial_request();
+		booking3data bk3dt = new booking3data();
+		try {
+			bk3dt.booking_table(room_id,check_in,check_out,guest_amount,cus_tit_name,cus_name_sure,cus_email,cus_intercode,cus_phonenum,cus_country);
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		return null;
 	}

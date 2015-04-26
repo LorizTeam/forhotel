@@ -21,8 +21,9 @@
 			country :
 			
 			<Strong>Occupancy</Strong><br/>
-			oc_name_sure : <html:text property="oc_name_sure"/><html:errors property="oc_name_sure"/><br/>
 			oc_title : <html:text property="oc_title"/><html:errors property="oc_title"/><br/>
+			oc_name_sure : <html:text property="oc_name_sure"/><html:errors property="oc_name_sure"/><br/>
+			
 
 			<Strong>Special request</Strong><br/>
 			special_request : <html:text property="special_request"/><html:errors property="special_request"/><br/>

@@ -47,7 +47,7 @@ public class Booking3Form extends ActionForm {
 
 	/** name_sure property */
 	private String name_sure;
-
+	private String room_id;
 	//for finish booking
 	//private String;
 	/*
@@ -225,5 +225,11 @@ public class Booking3Form extends ActionForm {
 	 */
 	public void setName_sure(String name_sure) {
 		this.name_sure = name_sure;
+	}
+	public String getRoom_id() {
+		return room_id;
+	}
+	public void setRoom_id(String roomId) {
+		room_id = roomId;
 	}
 }
