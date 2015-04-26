@@ -53,7 +53,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<div class="col-md-4">
 						<a href="#" data-toggle="modal" data-target="#<%=b2f.getRoom_id() %>" data-whatever="@getbootstrap">
 							<img src="<%=b2f.getRoomtype_picpath()%>" class="img-responsive thumbnail">
-						</a>
+						</a> 
 					</div>
 					<div class="col-md-8">
 						<div class="row">
