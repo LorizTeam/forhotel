@@ -23,7 +23,7 @@
 			</div>
 			<div class="col-md-5">
 				<div class="row text-center">
-					<a href="booking1.jsp" class=" btn  c"> BOOK NOW </a>
+					<a href="booking.html" class=" btn  c"> BOOK NOW </a>
 				</div>
 				<div class="row menu-in text-right">
 				<ul class="nav nav-pills text-right">
@@ -113,7 +113,7 @@
 					
 		<!--------------------------modal----------------------------------->
 <div class="modal fade" id="<%=idf.getHgal_id() %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
+	<div class="modal-dialog ">
     	<div class="modal-content">
       		<div class="modal-header">
         		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -121,19 +121,23 @@
       		</div>    
       		<div class="container">
       			<div class="row">
- 				<div class="fotorama" data-width="600px" data-autoplay="true" data-loop="true">
- 				<%	if(request.getAttribute("gallery") != null){
-					List lrd = (List)request.getAttribute("gallery");
-					for(Iterator iritem = lrd.iterator();iritem.hasNext();){
-					
-					IndexForm inf = (IndexForm) iritem.next();
+ 				<div class="fotorama" data-nav="thumbs" data-width="600px" data-allowfullscreen="true" data-autoplay="true" data-loop="true">
+ 				<%	
+ 					dbconnect dbcon = new dbconnect();
+					Connection con = dbcon.DBconn_mysql();
+					String sqlQuery = "select * from gallery_pic where gal_id='"+idf.getHgal_id()+"'";
+					Statement stmt = con.createStatement();
+					ResultSet rs = stmt.executeQuery(sqlQuery);
+			 				
+ 				
+					while(rs.next()){			
 				%>
- 					<img src="<%=inf.getGal_picpath() %>" >
+ 					<a href="<%=rs.getString("gal_picpath")%>"><img src="<%=rs.getString("gal_picpath")%>" width="144" height="96"></a>
  				<%
-						}
-					}
-			 	%>
+						}			
+			 	%>			 	
 			 	</div>
+			 	
  				</div>
 			</div>			
 		     <div class="modal-footer">	
@@ -163,7 +167,7 @@
 			</div>		
 		</div>
 		<!---------------------------3 page----------------------------------->
-		
+
 		<script src="js/jquery-1.11.2.min.js"></script>
 		<script src="fotorama.js"></script>
 		<script src="js/bootstrap.js"></script>
