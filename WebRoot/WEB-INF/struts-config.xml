@@ -50,11 +50,7 @@
       type="com.smict.struts.action.Booking2Action">
       <set-property property="cancellable" value="false" />
       <forward name="select_room" path="/booking3.jsp" />
-<<<<<<< HEAD
-=======
-      
-      
->>>>>>> origin/master
+
     </action>
     <action
       attribute="booking3Form"
