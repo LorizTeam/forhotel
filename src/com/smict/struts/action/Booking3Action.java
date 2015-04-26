@@ -6,11 +6,17 @@ package com.smict.struts.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.util.*;
+import java.sql.*;
+
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import com.smict.struts.form.Booking3Form;
+import java.util.*;
+import java.sql.*;
 
 /** 
  * MyEclipse Struts
@@ -34,7 +40,21 @@ public class Booking3Action extends Action {
 	 */
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) {
-		Booking3Form booking3Form = (Booking3Form) form;// TODO Auto-generated method stub
+		Booking3Form booking3Form = (Booking3Form) form;
+		HttpSession session = request.getSession();
+		// TODO Auto-generated method stub
+		
+		String room_id = (String) session.getAttribute("room_id"),
+		check_in = (String) session.getAttribute("tcheck_in"),
+		check_out = (String) session.getAttribute("tcheck_out"),
+		guest_amount = (String) session.getAttribute("gues_amount"),
+		cus_tit_name = booking3Form.getTitle(),
+		cus_name_sure = booking3Form.getName_sure(),
+		cus_email = booking3Form.getEmail(),
+		cus_intercode = booking3Form.getIntercode(),
+		cus_phonenum = booking3Form.getPhonenum(),
+		cus_country = booking3Form.getCountry();
+		
 		return null;
 	}
 }
