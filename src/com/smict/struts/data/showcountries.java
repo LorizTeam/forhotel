@@ -22,6 +22,6 @@ public class showcountries {
 			countryName = rs.getString("countryName");
 			countries.add(new Booking3Form(usefor,countryName));
 		}
-		return null;
+		return countries;
 	}
 }
