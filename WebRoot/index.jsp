@@ -112,8 +112,8 @@
 					<h4><%=idf.getHgal_name() %></h4>
 					
 		<!--------------------------modal----------------------------------->
-<div class="modal fade" id="<%=idf.getHgal_id() %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog ">
+<div class="modal fade " id="<%=idf.getHgal_id() %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
     	<div class="modal-content">
       		<div class="modal-header">
         		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
