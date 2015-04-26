@@ -52,6 +52,8 @@ public class Booking2Action extends Action {
 			HttpSession session = request.getSession();
 			session.setAttribute("roomtype_id", roomtype_id);
 			forwardText = "select_room";
+			
+			
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
