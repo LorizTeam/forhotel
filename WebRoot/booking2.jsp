@@ -9,28 +9,36 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 <html>
-  <head>
-    <base href="<%=basePath%>">
-    
-    <title>My JSP 'booking2.jsp' starting page</title>
-    
-	<meta http-equiv="pragma" content="no-cache">
-	<meta http-equiv="cache-control" content="no-cache">
-	<meta http-equiv="expires" content="0">    
-	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-	<meta http-equiv="description" content="This is my page">
-	<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
-
-  </head>
-  
-  <body>
-  		<html:form action="/booking2">
-    This is my JSP page. <br>
+<head>
+	<title>Room:Selection|Hotel.com</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.css">
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+	<body class="bbg">
+		<div class="container">
+			<div class="col-md-1"> </div>
+			<div class="col-md-10 frm thumbnail">
+				<h1>btHotel.com | Booking</h1>
+				<ul class="nav nav-tabs nav-justified text-center">
+					<li ><a href="booking1.jsp">Choose a room</a></li>
+					<li class="active"><a href="#"> Enhance your stay</a></li>
+					<li class="disabled"><a href="#">Book !</a></li>
+				</ul>
+				<div class="progress">
+					<div class="progress-bar progress-bar-success" style="width: 33.7%">				
+ 					 </div>
+  					<div class="progress-bar progress-bar-striped active" 
+  					role="progressbar" aria-valuenow="34.4" aria-valuemin="0" 
+  					aria-valuemax="100" style="width: 34.4%">		
+  					</div>
+  					<div class="progress-bar progress-bar-warning" style="width: 31.9%">				
+ 					 </div>
+				</div>
+			
+				
     		<%	
     		String avail;
     		if(request.getAttribute("booking2Form") != null){
@@ -40,18 +48,44 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						Booking2Form b2f= (Booking2Form) iteritem.next();
 						avail = "Select "+b2f.getRoomtype_name();
 			%>
-				<ul>
-					<li><%=b2f.getRoom_id() %></li>
-					<li><%=b2f.getRoomtype_id() %></li>
-					<li><%=b2f.getRoomtype_name() %></li>
-				</ul>
+			<form class="thumbnail frmbg">
+				<div class="row">
+					<div class="col-md-3">
+						<img src="" class="img-responsive">
+					</div>
+					<div class="col-md-9">
+						<div class="row">
+							<div class="col-md-3 text-right pad">Room No.</div>
+							<div class="col-md-7 pad"><%=b2f.getRoom_id() %></div>
+						</div>
+						<div class="row">
+							<div class="col-md-3 text-right pad">Room Type.</div>
+							<div class="col-md-7 pad"><%=b2f.getRoomtype_name() %></div>
+						</div>
+						<div class="row">
+							<div class="col-md-3 text-right pad"></div>
+							<div class="col-md-7 pad">
+								<button type="submit" class="btn btn-info" ><%=avail %></button>
+							</div>
+						</div>
+					</div>
+				</div>
+					
+					
+					
 				
-				<html:submit property ="submit" value="<%=avail %>"/>
+				
+				
+			</form>
 			<%
 						}
 				}
 						
 			%>
-		</html:form>
+		
+			</div>
+		</div>
+		
+  		
   </body>
 </html>
