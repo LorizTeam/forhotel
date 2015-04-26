@@ -26,7 +26,9 @@ public class booking1data {
 			roomtype_single_bed = rs_slide.getString("roomtype_single_bed");
 			roomtype_double_bed = rs_slide.getString("roomtype_double_bed");
 			roomtype_guest = rs_slide.getString("roomtype_guest");
-			lindex.add(new Booking2Form(room_id,roomtype_id,roomtype_name,roomtype_desc,roomtype_detail,roomtype_single_bed,roomtype_double_bed,roomtype_guest,roomtype_price));
+			String pic_status = rs_slide.getString("pic_status");
+			String roomtype_picpath = rs_slide.getString("roomtype_picpath");
+			lindex.add(new Booking2Form(room_id,roomtype_id,roomtype_name,roomtype_desc,roomtype_detail,roomtype_single_bed,roomtype_double_bed,roomtype_guest,roomtype_price,pic_status,roomtype_picpath));
 		}
 		rs_slide.close();
 		stmt.close();
