@@ -4,11 +4,16 @@
   <StrutsActivity path="/indexStart.do" location="570,60" dimension="253,96" />
   <StrutsActivity path="/booking1.do" location="570,165" dimension="251,96" />
   <StrutsActivity path="/booking2.do" location="570,285" dimension="251,96" />
+<<<<<<< HEAD
   <StrutsActivity path="/booking3.do" location="570,420" dimension="251,96" />
+=======
+  <StrutsActivity path="/booking3.do" location="660,450" dimension="251,96" />
+>>>>>>> origin/master
   <StrutsActivity path="/index.jsp" location="350,50" dimension="81,51" />
   <StrutsActivity path="/room_not_empty.jsp" location="345,270" dimension="150,100" />
   <StrutsActivity path="/booking2.jsp" location="960,165" dimension="150,100" />
   <StrutsActivity path="booking1.jsp" location="345,165" dimension="98,51" />
+<<<<<<< HEAD
   <StrutsActivity path="booking3.jsp" location="345,450" dimension="98,51" />
   <StrutsActivity path="/booking3.jsp" location="50,350" dimension="103,51" />
   <StrutsTransition id="/booking2.do,select_room,/booking3.jsp,1" routingType="0">
@@ -16,12 +21,27 @@
       <AbsolutePoint location="695,381" />
       <AbsolutePoint location="695,396" />
       <AbsolutePoint location="153,396" />
+=======
+  <StrutsActivity path="/booking3.jsp" location="405,465" dimension="103,51" />
+  <StrutsActivity path="/booking3Start.do" location="60,450" dimension="275,96" />
+  <StrutsTransition id="/booking2.do,select_room,/booking3.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="615,381" />
+      <AbsolutePoint location="615,490" />
+      <AbsolutePoint location="508,490" />
+>>>>>>> origin/master
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/index.jsp,null,/index.do,2" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="350,75" />
       <AbsolutePoint location="289,75" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/booking3Start.do,success,/booking3.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="335,490" />
+      <AbsolutePoint location="405,490" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/booking2.do,select_room,booking3.jsp,1" routingType="0">
@@ -42,7 +62,7 @@
   <StrutsTransition id="booking3.jsp,null,/booking3.do,2" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="443,468" />
-      <AbsolutePoint location="570,468" />
+      <AbsolutePoint location="660,498" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/booking2.jsp,null,/booking2.do,2" routingType="0">
@@ -56,6 +76,21 @@
     <AutomaticBendpoints>
       <AbsolutePoint location="443,190" />
       <AbsolutePoint location="570,190" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/booking3.jsp,null,/booking3.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="456,516" />
+      <AbsolutePoint location="456,531" />
+      <AbsolutePoint location="660,531" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/booking2.do,select_room,/booking3Start.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="695,381" />
+      <AbsolutePoint location="695,426" />
+      <AbsolutePoint location="197,426" />
+      <AbsolutePoint location="197,450" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/booking1.do,roomempty,/booking2.jsp,1" routingType="0">

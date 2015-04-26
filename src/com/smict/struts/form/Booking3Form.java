@@ -52,6 +52,14 @@ public class Booking3Form extends ActionForm {
 	 * Generated Methods
 	 */
 
+	public Booking3Form () {};
+	public Booking3Form(String usefor, String s1) {
+		// TODO Auto-generated constructor stub
+		if (usefor == "show_countries"){
+			this.country = s1;
+		}
+	}
+
 	/** 
 	 * Method validate
 	 * @param mapping

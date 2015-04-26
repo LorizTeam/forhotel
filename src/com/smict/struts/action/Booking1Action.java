@@ -42,7 +42,6 @@ public class Booking1Action extends Action {
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) {
 		Booking1Form booking1Form = (Booking1Form) form;// TODO Auto-generated method stub
-		Booking2Form booking2Form = new Booking2Form();
 		String tcheck_in = booking1Form.getDate_check_in(),
 		tcheck_out=booking1Form.getDate_check_out(),
 		gues_amount = booking1Form.getPeople_booking(),

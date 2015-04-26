@@ -58,7 +58,7 @@
 					</div>
 					<div class="col-sm-2 text-right text-warning"><i class="glyphicon glyphicon glyphicon-remove-sign"></i> CHECK OUT</div>
 					<div class="col-sm-3">
-						<div class="form-group">
+						<div class="form-group"> 
 							<span class="form-control" id="toDisplay2">Check out</span>
 							<html:hidden name="date_check_out"  property="date_check_out" value="" ></html:hidden>
 							<div class="vf-datepicker" id="endDP2"></div>
