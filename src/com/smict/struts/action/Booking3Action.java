@@ -63,10 +63,12 @@ public class Booking3Action extends Action {
 		oc_title = booking3Form.getOc_title(),
 		oc_name_sure = booking3Form.getOc_name_sure(),
 		//for _table
-		special_request =booking3Form.getSpecial_request();
+		special_request =booking3Form.getSpecial_request(),
+		booking_id="";
 		booking3data bk3dt = new booking3data();
 		try {
-			bk3dt.booking_table(room_id,check_in,check_out,cus_tit_name,cus_name_sure,cus_email,cus_intercode,cus_phonenum,cus_country);
+			booking_id = bk3dt.booking_table(room_id,check_in,check_out,cus_tit_name,cus_name_sure,cus_email,cus_intercode,cus_phonenum,cus_country);
+			
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
