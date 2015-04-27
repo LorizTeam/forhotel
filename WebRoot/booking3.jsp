@@ -13,7 +13,7 @@
 	<body>
 		<html:form action="/booking3">
 			<% String room_id = request.getParameter("room_id"); %>
-			<%=request.getParameter("room_id") %>
+			
 			<html:hidden property="room_id" value="<%=room_id %>"/>
 			<Strong>Guest Detail</Strong><br/>
 			title : <html:text property="title"/><html:errors property="title"/><br/>
