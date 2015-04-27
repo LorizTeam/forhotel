@@ -43,6 +43,7 @@ public class Booking3Action extends Action {
 			HttpServletRequest request, HttpServletResponse response) {
 		Booking3Form booking3Form = (Booking3Form) form;
 		HttpSession session = request.getSession();
+		String forwardText = "";
 		// TODO Auto-generated method stub
 		
 		//for booking_table
@@ -65,13 +66,20 @@ public class Booking3Action extends Action {
 		//for _table
 		special_request =booking3Form.getSpecial_request(),
 		booking_id="";
+		int loop_guest = Integer.parseInt(guest_amount);
 		booking3data bk3dt = new booking3data();
+		int i = 1 ;
+		String receiveoc ;
+		while(i < loop_guest){
+			receiveoc = booking3Form.getOc_name_sure();
+		}
 		try {
 			booking_id = bk3dt.booking_table(room_id,check_in,check_out,cus_tit_name,cus_name_sure,cus_email,cus_intercode,cus_phonenum,cus_country);
 			
 			bk3dt.occupancy_table(booking_id,oc_title,oc_name_sure);
-			
+		
 			bk3dt.request_table(booking_id, special_request);
+			forwardText = "booking_success";
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -80,6 +88,6 @@ public class Booking3Action extends Action {
 			e.printStackTrace();
 		}
 		
-		return null;
+		return mapping.findForward(forwardText);
 	}
 }

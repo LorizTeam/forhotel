@@ -8,6 +8,7 @@
     <form-bean name="booking1Form" type="com.smict.struts.form.Booking1Form" />
     <form-bean name="booking2Form" type="com.smict.struts.form.Booking2Form" />
     <form-bean name="booking3Form" type="com.smict.struts.form.Booking3Form" />
+    <form-bean name="detailbookingForm" type="com.smict.struts.form.DetailbookingForm" />
 
   </form-beans>
 
@@ -59,6 +60,16 @@
       path="/booking3"
       scope="request"
       type="com.smict.struts.action.Booking3Action">
+      <set-property property="cancellable" value="true" />
+      <forward name="booking_success" path="/detailbooking.jsp" />
+    </action>
+    <action
+      attribute="detailbookingForm"
+      input="/detailbooking.jsp"
+      name="detailbookingForm"
+      path="/detailbooking"
+      scope="request"
+      type="com.smict.struts.action.DetailbookingAction">
       <set-property property="cancellable" value="true" />
     </action>
     

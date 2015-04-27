@@ -10,6 +10,15 @@
   <StrutsActivity path="/booking2.jsp" location="525,315" dimension="103,51" />
   <StrutsActivity path="booking1.jsp" location="1065,120" dimension="98,51" />
   <StrutsActivity path="/booking3.jsp" location="390,435" dimension="103,51" />
+  <StrutsActivity path="/detailbooking.do" location="50,550" dimension="275,96" />
+  <StrutsActivity path="/detailbooking.jsp" location="650,650" dimension="126,51" />
+  <StrutsTransition id="/detailbooking.jsp,null,/detailbooking.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="703,650" />
+      <AbsolutePoint location="703,598" />
+      <AbsolutePoint location="325,598" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
   <StrutsTransition id="/index.jsp,null,/index.do,2" routingType="0">
     <AutomaticBendpoints>
       <AbsolutePoint location="340,225" />
@@ -29,6 +38,12 @@
       <AbsolutePoint location="215,411" />
       <AbsolutePoint location="215,460" />
       <AbsolutePoint location="390,460" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/booking3.do,booking_success,/detailbooking.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="750,531" />
+      <AbsolutePoint location="750,650" />
     </AutomaticBendpoints>
   </StrutsTransition>
   <StrutsTransition id="/booking2.jsp,null,/booking2.do,2" routingType="0">

@@ -71,10 +71,7 @@
 			
 			<Strong>Occupancy</Strong><br/>
 			
-			<% String ga =(String) session.getAttribute("guest_amount");
-				int i = 1,guest = Integer.parseInt(ga);
-				while(i <= guest){	
-			%>
+			
 
 			oc_title : <html:select property="oc_title">
 					   <html:option value="Mr.">Mr.</html:option>
@@ -83,8 +80,9 @@
 					   <html:option value="Ms.">Ms.</html:option>
 					   <html:option value="Dr. ">Dr. </html:option>
 			    	   </html:select>
-			oc_name_sure : <html:text property="oc_name_sure"/><html:errors property="oc_name_sure"/><br/>
+			oc_name_sure : <html:text property="oc_name_sure"/>
 			<%
+					
 					i++;
 				}
 			%>

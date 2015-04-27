@@ -38,6 +38,10 @@ public class Booking3Form extends ActionForm {
 
 	/** oc_name_sure property */
 	private String oc_name_sure;
+	
+	//for loop occupancy
+	private String oc_title1,oc_title2,oc_title3,oc_title4,oc_title5,oc_title6,oc_title7,oc_title8,oc_title9,oc_title10;
+	private String oc_name_sure1,oc_name_sure2,oc_name_sure3,oc_name_sure4,oc_name_sure5,oc_name_sure6,oc_name_sure7,oc_name_sure8,oc_name_sure9,oc_name_sure10;
 
 	/** phonenum property */
 	private String phonenum;
@@ -272,5 +276,125 @@ public class Booking3Form extends ActionForm {
 	}
 	public void setTrue_calling(String trueCalling) {
 		true_calling = trueCalling;
+	}
+	public String getOc_title1() {
+		return oc_title1;
+	}
+	public void setOc_title1(String ocTitle1) {
+		oc_title1 = ocTitle1;
+	}
+	public String getOc_title2() {
+		return oc_title2;
+	}
+	public void setOc_title2(String ocTitle2) {
+		oc_title2 = ocTitle2;
+	}
+	public String getOc_title3() {
+		return oc_title3;
+	}
+	public void setOc_title3(String ocTitle3) {
+		oc_title3 = ocTitle3;
+	}
+	public String getOc_title4() {
+		return oc_title4;
+	}
+	public void setOc_title4(String ocTitle4) {
+		oc_title4 = ocTitle4;
+	}
+	public String getOc_title5() {
+		return oc_title5;
+	}
+	public void setOc_title5(String ocTitle5) {
+		oc_title5 = ocTitle5;
+	}
+	public String getOc_title6() {
+		return oc_title6;
+	}
+	public void setOc_title6(String ocTitle6) {
+		oc_title6 = ocTitle6;
+	}
+	public String getOc_title7() {
+		return oc_title7;
+	}
+	public void setOc_title7(String ocTitle7) {
+		oc_title7 = ocTitle7;
+	}
+	public String getOc_title8() {
+		return oc_title8;
+	}
+	public void setOc_title8(String ocTitle8) {
+		oc_title8 = ocTitle8;
+	}
+	public String getOc_title9() {
+		return oc_title9;
+	}
+	public void setOc_title9(String ocTitle9) {
+		oc_title9 = ocTitle9;
+	}
+	public String getOc_title10() {
+		return oc_title10;
+	}
+	public void setOc_title10(String ocTitle10) {
+		oc_title10 = ocTitle10;
+	}
+	public String getOc_name_sure1() {
+		return oc_name_sure1;
+	}
+	public void setOc_name_sure1(String ocNameSure1) {
+		oc_name_sure1 = ocNameSure1;
+	}
+	public String getOc_name_sure2() {
+		return oc_name_sure2;
+	}
+	public void setOc_name_sure2(String ocNameSure2) {
+		oc_name_sure2 = ocNameSure2;
+	}
+	public String getOc_name_sure3() {
+		return oc_name_sure3;
+	}
+	public void setOc_name_sure3(String ocNameSure3) {
+		oc_name_sure3 = ocNameSure3;
+	}
+	public String getOc_name_sure4() {
+		return oc_name_sure4;
+	}
+	public void setOc_name_sure4(String ocNameSure4) {
+		oc_name_sure4 = ocNameSure4;
+	}
+	public String getOc_name_sure5() {
+		return oc_name_sure5;
+	}
+	public void setOc_name_sure5(String ocNameSure5) {
+		oc_name_sure5 = ocNameSure5;
+	}
+	public String getOc_name_sure6() {
+		return oc_name_sure6;
+	}
+	public void setOc_name_sure6(String ocNameSure6) {
+		oc_name_sure6 = ocNameSure6;
+	}
+	public String getOc_name_sure7() {
+		return oc_name_sure7;
+	}
+	public void setOc_name_sure7(String ocNameSure7) {
+		oc_name_sure7 = ocNameSure7;
+	}
+	public String getOc_name_sure8() {
+		return oc_name_sure8;
+	}
+	public void setOc_name_sure8(String ocNameSure8) {
+		oc_name_sure8 = ocNameSure8;
+	}
+	public String getOc_name_sure9() {
+		return oc_name_sure9;
+	}
+	public void setOc_name_sure9(String ocNameSure9) {
+		oc_name_sure9 = ocNameSure9;
+	}
+	public String getOc_name_sure10() {
+		return oc_name_sure10;
+	}
+	public void setOc_name_sure10(String ocNameSure10) {
+		oc_name_sure10 = ocNameSure10;
 	}
 }
