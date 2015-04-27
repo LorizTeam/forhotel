@@ -20,7 +20,7 @@
 	<body class="bbg">
 		<div class="container">
 			<div class="col-md-1"> </div>
-		<html:form action="/booking1">
+		<html:form action="/booking2Start">
 		<div class="col-md-10 thumbnail frm">
 		<% 
 		String date_check_in = "",date_check_out = "",people_booking = "";
@@ -55,7 +55,7 @@
        				<div class="col-sm-3"> 					
        					<div class="form-group">
 							<span class="form-control" id="fromDisplay2" name="from">Check in</span>
-							<html:hidden name="from"  property="date_check_in" value="" ></html:hidden>
+							<input type="hidden" name="from" value="" id="fromInput2" required>
 							<div class="vf-datepicker" id="startDP2"></div>
 						</div>
 					</div>
@@ -63,7 +63,7 @@
 					<div class="col-sm-3">
 						<div class="form-group"> 
 							<span class="form-control" id="toDisplay2" name="to">Check out</span>
-							<html:hidden name="to"  property="date_check_out" value="" ></html:hidden>
+							<input type="hidden" name="to" value="" id="toInput2"required>
 							<div class="vf-datepicker" id="endDP2"></div>
 						</div>
 					</div>
