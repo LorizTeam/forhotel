@@ -66,6 +66,17 @@ public class Booking2Action extends Action {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		List show_country;
+		try {
+			List show_numcode = sct.show_numcode();
+			request.setAttribute("show_numcode", show_numcode);
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		/*request.setAttribute("room_id", request.getParameter("room_id"));
 		request.setAttribute("roomtype_name", request.getParameter("roomtype_name"));

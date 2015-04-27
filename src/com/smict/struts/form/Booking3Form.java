@@ -50,13 +50,13 @@ public class Booking3Form extends ActionForm {
 	private String room_id;
 	//for finish booking
 	//from booking2
-	private String roomtype_name,roomtype_picpath,roomtype_id;
+	private String roomtype_name,roomtype_picpath,roomtype_id,numcode;
 	//private String;
 	/*
 	 * Generated Methods
 	 */
 
-	public Booking3Form () {};
+	public Booking3Form (){};
 	public Booking3Form(String usefor, String s1) {
 		// TODO Auto-generated constructor stub
 		if (usefor == "show_countries"){
@@ -251,5 +251,11 @@ public class Booking3Form extends ActionForm {
 	}
 	public void setRoomtype_id(String roomtypeId) {
 		roomtype_id = roomtypeId;
+	}
+	public String getNumcode() {
+		return numcode;
+	}
+	public void setNumcode(String numcode) {
+		this.numcode = numcode;
 	}
 }
