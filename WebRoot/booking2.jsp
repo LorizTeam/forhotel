@@ -52,7 +52,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						Booking2Form b2f= (Booking2Form) iteritem.next();
 						avail = "Select "+b2f.getRoomtype_name();
 			%>
-			<form class="thumbnail frmbg"  method="post" action="booking3.jsp">
+			<form class="thumbnail frmbg"  method="post" action="booking2.do">
 				<div class="row">
 					<div class="col-md-5">
 						<a href="#" data-toggle="modal" data-target="#<%=b2f.getRoomtype_id() %>" data-whatever="@getbootstrap">

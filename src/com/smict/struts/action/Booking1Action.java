@@ -44,19 +44,19 @@ public class Booking1Action extends Action {
 			HttpServletRequest request, HttpServletResponse response) {
 		Booking1Form booking1Form = (Booking1Form) form;
 		// TODO Auto-generated method stub
-		String tcheck_in = booking1Form.getDate_check_in(),
-		tcheck_out=booking1Form.getDate_check_out(),
-		gues_amount = booking1Form.getPeople_booking(),
+		String tcheck_in = request.getParameter("from"),
+		tcheck_out= request.getParameter("to"),
+		guest_amount = booking1Form.getPeople_booking(),
 		submit = booking1Form.getSubmit();
 		booking1data bk1dt = new booking1data();
 		String forwardText = "";
 		HttpSession session = request.getSession();
 		session.setAttribute("tcheck_in", tcheck_in);
 		session.setAttribute("tcheck_out", tcheck_out);
-		session.setAttribute("gues_amount", gues_amount);
+		session.setAttribute("guest_amount", guest_amount);
 		
 			try {
-				List lsearchroom = bk1dt.searchroom_empty(tcheck_in, tcheck_out, gues_amount);
+				List lsearchroom = bk1dt.searchroom_empty(tcheck_in, tcheck_out, guest_amount);
 				request.setAttribute("booking2Form", lsearchroom);
 				if (lsearchroom.size() > 0){
 					forwardText = "roomempty";

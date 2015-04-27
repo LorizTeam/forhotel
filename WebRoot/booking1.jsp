@@ -20,7 +20,7 @@
 	<body class="bbg">
 		<div class="container">
 			<div class="col-md-1"> </div>
-		<html:form action="/booking2Start">
+		<html:form action="/booking1">
 		<div class="col-md-10 thumbnail frm">
 		<% 
 		String date_check_in = "",date_check_out = "",people_booking = "";

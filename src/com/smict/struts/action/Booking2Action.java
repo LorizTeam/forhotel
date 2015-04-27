@@ -62,6 +62,7 @@ public class Booking2Action extends Action {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}*/
+		int i = 0;
 		return mapping.findForward(forwardText);
 	}
 }
