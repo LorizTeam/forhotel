@@ -58,9 +58,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<a href="#" data-toggle="modal" data-target="#<%=b2f.getRoomtype_id() %>" data-whatever="@getbootstrap">
 							<img src="<%=b2f.getRoomtype_picpath()%>" class="img-responsive thumbnail">
 							<input name="roomtype_picpath" type="hidden" value="<%=b2f.getRoomtype_picpath()%>" />
+							<input name="roomtype_id" type="hidden" value="<%=b2f.getRoomtype_id() %>" />
 						</a> 
 					</div>
-					<input name="roomtype_name" type="hidden" value="<%=b2f.getRoomtype_id() %>" />
+					<input name="roomtype_name" type="hidden" value="<%=b2f.getRoomtype_name() %>" />
 					<div class="col-md-7">
 						<div class="row">
 							<div class="col-md-4 text-right pad"><strong>Room No:</strong></div>
@@ -72,6 +73,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							<div class="col-md-4 text-right pad"><strong>Room Type:</strong></div>
 							<div class="col-md-8 pad"><%=b2f.getRoomtype_name() %></div>
 							<input name="roomtype_name" type="hidden" value="<%=b2f.getRoomtype_name() %>" />
+							
 						</div>
 						<div class="row">
 							<div class="col-md-4 text-right pad"><strong>Bedding:</strong></div>
@@ -96,6 +98,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</div>
 				</div>
 			<div class="modal fade" id="<%=b2f.getRoomtype_id() %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  
 			  <div class="modal-dialog">
 			    <div class="modal-content">
 			      <div class="modal-body">

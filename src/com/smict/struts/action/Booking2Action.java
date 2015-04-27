@@ -18,6 +18,7 @@ import org.apache.struts.action.ActionMapping;
 
 import com.smict.struts.data.searchroomtypeid;
 import com.smict.struts.form.Booking2Form;
+import com.smict.struts.form.Booking3Form;
 
 /** 
  * MyEclipse Struts
@@ -46,11 +47,17 @@ public class Booking2Action extends Action {
 		String forwardText = "to_booking";
 		String room_id,roomtype_name,roomtype_picpath,roomtype_id;
 		// TODO Auto-generated method stub
+		//Booking3Form booking3Form = (Booking3Form) form;
 		
-		room_id = request.getParameter("room_id");
 		roomtype_name = request.getParameter("roomtype_name");
+		room_id = request.getParameter("room_id");
 		roomtype_picpath = request.getParameter("roomtype_picpath");
 		roomtype_id = request.getParameter("roomtype_id");
+		/*request.setAttribute("room_id", request.getParameter("room_id"));
+		request.setAttribute("roomtype_name", request.getParameter("roomtype_name"));
+		request.setAttribute("roomtype_picpath", request.getParameter("roomtype_picpath"));
+		request.setAttribute("roomtype_id", request.getParameter("roomtype_id"));*/
+		
 		/*
 		String submit = booking2Form.getSubmit();
 		submit = submit.substring(7);
