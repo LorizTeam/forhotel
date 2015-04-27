@@ -60,6 +60,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							<input name="roomtype_picpath" type="hidden" value="<%=b2f.getRoomtype_picpath()%>" />
 						</a> 
 					</div>
+					<input name="roomtype_name" type="hidden" value="<%=b2f.getRoomtype_id() %>" />
 					<div class="col-md-7">
 						<div class="row">
 							<div class="col-md-4 text-right pad"><strong>Room No:</strong></div>
@@ -76,7 +77,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							<div class="col-md-4 text-right pad"><strong>Bedding:</strong></div>
 							<div class="col-md-8 pad">
 							<%=b2f.getRoomtype_single_bed() %>x Single bed | 
-							<%=b2f.getRoomtype_single_bed() %>X Double bed</div>
+							<%=b2f.getRoomtype_double_bed() %>X Double bed</div>
 						</div>
 						<div class="row">
 							<div class="col-md-4 text-right pad"><strong>Guests:</strong></div>
@@ -115,7 +116,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			 				
  				
 					while(rs.next()){			
-				%>
+				%>	
+					
 			       <a href="<%=rs.getString("roomtype_picpath")%>"><img src="<%=rs.getString("roomtype_picpath")%>" width="144" height="96"></a>     
 			        
 			      <%
