@@ -43,7 +43,8 @@ public class Booking2Action extends Action {
 			HttpServletRequest request, HttpServletResponse response) {
 		Booking2Form booking2Form = (Booking2Form) form;
 		searchroomtypeid srtid = new searchroomtypeid();
-		String forwardText = "";/*
+		String forwardText = "";
+		/*
 		// TODO Auto-generated method stub
 		String submit = booking2Form.getSubmit();
 		submit = submit.substring(7);
