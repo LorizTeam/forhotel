@@ -57,6 +57,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<div class="col-md-5">
 						<a href="#" data-toggle="modal" data-target="#<%=b2f.getRoomtype_id() %>" data-whatever="@getbootstrap">
 							<img src="<%=b2f.getRoomtype_picpath()%>" class="img-responsive thumbnail">
+							<input name="roomtype_picpath" type="hidden" value="<%=b2f.getRoomtype_picpath()%>" />
 						</a> 
 					</div>
 					<div class="col-md-7">
@@ -69,6 +70,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<div class="row">
 							<div class="col-md-4 text-right pad"><strong>Room Type:</strong></div>
 							<div class="col-md-8 pad"><%=b2f.getRoomtype_name() %></div>
+							<input name="roomtype_name" type="hidden" value="<%=b2f.getRoomtype_name() %>" />
 						</div>
 						<div class="row">
 							<div class="col-md-4 text-right pad"><strong>Bedding:</strong></div>
@@ -78,7 +80,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						</div>
 						<div class="row">
 							<div class="col-md-4 text-right pad"><strong>Guests:</strong></div>
-							<div class="col-md-8 pad"><%=b2f.getRoomtype_guest() %></div>
+							<div class="col-md-8 pad"><%=b2f.getRoomtype_guest() %></div>						
 						</div>
 						<div class="row">
 							<div class="col-md-4 text-right pad"><strong>Av. price per night:</strong></div>

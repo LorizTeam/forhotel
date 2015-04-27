@@ -9,6 +9,8 @@
 <html>
 <head>
 	<title>Room:Selection|Hotel.com</title>
+	  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/bootstrap-theme.css">
 	<link rel="stylesheet" href="css/style.css" />
@@ -53,15 +55,15 @@
        				<div class="col-sm-3"> 					
        					<div class="form-group">
 							<span class="form-control" id="fromDisplay2" name="from">Check in</span>
-							<html:hidden name="date_check_in" property="date_check_in" value="" ></html:hidden>
+							<html:hidden name="from"  property="date_check_in" value="" ></html:hidden>
 							<div class="vf-datepicker" id="startDP2"></div>
 						</div>
 					</div>
 					<div class="col-sm-2 text-right text-warning"><i class="glyphicon glyphicon glyphicon-remove-sign"></i> CHECK OUT</div>
 					<div class="col-sm-3">
 						<div class="form-group"> 
-							<span class="form-control" id="toDisplay2">Check out</span>
-							<html:hidden name="date_check_out"  property="date_check_out" value="" ></html:hidden>
+							<span class="form-control" id="toDisplay2" name="to">Check out</span>
+							<html:hidden name="to"  property="date_check_out" value="" ></html:hidden>
 							<div class="vf-datepicker" id="endDP2"></div>
 						</div>
 					</div>
