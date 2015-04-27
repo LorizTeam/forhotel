@@ -12,17 +12,10 @@
 	</head>
 	<body>
 		<html:form action="/booking3">
-<<<<<<< HEAD
+
 			<% 	
 				String roomtype_id = request.getParameter("roomtype_id");
-=======
-
-			<%
-
-				String roomtype_id_test = request.getParameter("roomtype_id");
->>>>>>> origin/master
 				String room_id = request.getParameter("room_id"); 
-
 				String roomtype_name = request.getParameter("roomtype_name");
 				String roomtype_picpath = request.getParameter("roomtype_picpath");
 			%>
