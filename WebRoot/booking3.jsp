@@ -30,10 +30,30 @@
 			<%=roomtype_picpath %>
 			<html:hidden property="room_id" value="<%=room_id %>"/>
 			<Strong>Guest Detail</Strong><br/>
-			title : <html:text property="title" /><html:errors property="title"/><br/>
+			title : <html:select property="title">
+				    <html:option value="Mr.">Mr.</html:option>
+				    <html:option value="Mrs.">Mrs.</html:option>
+				    <html:option value="Miss.">Miss.</html:option>
+				    <html:option value="Ms.">Ms.</html:option>
+				    <html:option value="Dr. ">Dr. </html:option>
+		    		</html:select>
+    		<html:text property="title" /><html:errors property="title"/><br/>
 			name_sure : <html:text property="name_sure"/><html:errors property="name_sure"/><br/>
 			email : <html:text property="email"/><html:errors property="email"/><br/>						
-			intercode : <html:text property="intercode"/><html:errors property="intercode"/><br/>
+			intercode : <html:select property="dial_code">
+    		<%
+    			if(request.getAttribute("show_numcode") != null){
+   				List lrtd = (List)request.getAttribute("show_numcode");
+		    		for(Iterator iteritem = lrtd.iterator();iteritem.hasNext();){
+		    
+		    	Booking3Form b3f= (Booking3Form) iteritem.next();
+		    %>
+		    <html:option value="<%=b3f.getTrue_calling() %>"><%=b3f.getDial_code() %></html:option>
+		    <%
+		    		}
+		    	}
+		    %>
+    </html:select>
 			phonenum : <html:text property="phonenum"/><html:errors property="phonenum"/><br/>
 			country : <html:text property="country"/><html:errors property="phonenum"/><br/>
 			
@@ -44,7 +64,13 @@
 				while(i <= guest){	
 			%>
 
-			oc_title : <html:text property="oc_title"/><html:errors property="oc_title"/><br/>
+			oc_title : <html:select property="oc_title">
+					   <html:option value="Mr.">Mr.</html:option>
+					   <html:option value="Mrs.">Mrs.</html:option>
+					   <html:option value="Miss.">Miss.</html:option>
+					   <html:option value="Ms.">Ms.</html:option>
+					   <html:option value="Dr. ">Dr. </html:option>
+			    	   </html:select>
 			oc_name_sure : <html:text property="oc_name_sure"/><html:errors property="oc_name_sure"/><br/>
 			<%
 					i++;

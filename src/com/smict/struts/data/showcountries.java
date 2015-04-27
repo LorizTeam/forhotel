@@ -26,14 +26,20 @@ public class showcountries {
 	public List show_numcode() throws ClassNotFoundException, SQLException{
 		dbconnect dbcon = new dbconnect();
 		Connection con = dbcon.DBconn_mysql();
-		String sqlQuery = "SELECT numcode FROM  country_t";
+		String sqlQuery = "select calling_code as true_calling,CONCAT('+',calling_code,'  -',short_name) as calling_code" +
+				" from country_t" +
+				" WHERE" +
+				" country_t.calling_code IS NOT NULL" +
+				" and country_t.calling_code NOT IN ('NONE')" +
+				" ORDER BY calling_code";
 		Statement stmt = con.createStatement();
 		ResultSet rs= stmt.executeQuery(sqlQuery);
 		List countries = new ArrayList();
-		String numcode,usefor="numcode";
+		String numcode,usefor="numcode",true_calling;
 		while(rs.next()){
-			numcode = rs.getString("numcode");
-			countries.add(new Booking3Form(usefor,numcode));
+			true_calling = rs.getString("true_calling");
+			numcode = rs.getString("calling_code");
+			countries.add(new Booking3Form(usefor,numcode,true_calling));
 		}
 		return countries;
 	}

@@ -50,7 +50,7 @@ public class Booking3Form extends ActionForm {
 	private String room_id;
 	//for finish booking
 	//from booking2
-	private String roomtype_name,roomtype_picpath,roomtype_id,numcode;
+	private String roomtype_name,roomtype_picpath,roomtype_id,dial_code,true_calling;
 	//private String;
 	/*
 	 * Generated Methods
@@ -61,9 +61,18 @@ public class Booking3Form extends ActionForm {
 		// TODO Auto-generated constructor stub
 		if (usefor == "show_countries"){
 			this.country = s1;
+		}else{
+			this.dial_code = s1;
 		}
 	}
 
+	public Booking3Form(String usefor, String s1, String s2) {
+		// TODO Auto-generated constructor stub
+		if(usefor == "numcode"){
+			this.dial_code = s1;
+			this.true_calling = s2;
+		}
+	}
 	/** 
 	 * Method validate
 	 * @param mapping
@@ -252,10 +261,16 @@ public class Booking3Form extends ActionForm {
 	public void setRoomtype_id(String roomtypeId) {
 		roomtype_id = roomtypeId;
 	}
-	public String getNumcode() {
-		return numcode;
+	public String getDial_code() {
+		return dial_code;
 	}
-	public void setNumcode(String numcode) {
-		this.numcode = numcode;
+	public void setDial_code(String dialCode) {
+		dial_code = dialCode;
+	}
+	public String getTrue_calling() {
+		return true_calling;
+	}
+	public void setTrue_calling(String trueCalling) {
+		true_calling = trueCalling;
 	}
 }
