@@ -8,10 +8,12 @@
 <%@ page import ="javax.servlet.http.HttpServletRequest.*"%>
 <%@ page import ="javax.servlet.http.HttpServletResponse.*"%>
 <%@ page import ="javax.servlet.http.HttpSession.*"%>
+
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,8 +43,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   					<div class="progress-bar progress-bar-warning" style="width: 31.9%">				
  					 </div>
 				</div>
-			
-				
     		<%	
     		String avail;
     		if(request.getAttribute("booking2Form") != null){
