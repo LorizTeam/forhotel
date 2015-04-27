@@ -49,7 +49,7 @@
       scope="request"
       type="com.smict.struts.action.Booking2Action">
       <set-property property="cancellable" value="false" />
-      <forward name="select_room" path="/booking3.jsp" />
+      <forward name="to_booking" path="/booking3.jsp" />
 
     </action>
     <action

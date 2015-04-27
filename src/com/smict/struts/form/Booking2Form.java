@@ -37,10 +37,10 @@ public class Booking2Form extends ActionForm {
 		this.roomtype_name = s3;
 		this.roomtype_desc = s4;
 		this.roomtype_detail = s5;
-		this.roomtype_single_bed = i1;
-		this.roomtype_double_bed = i2;
-		this.roomtype_guest = i3;
-		this.roomtype_price = d1;
+		this.roomtype_single_bed = d1;
+		this.roomtype_double_bed = i1;
+		this.roomtype_guest = i2;
+		this.roomtype_price = i3;
 		this.pic_status = i4;
 		this.roomtype_picpath = i5;
 	}
