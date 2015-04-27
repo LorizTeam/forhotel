@@ -24,12 +24,17 @@
 			email : <html:text property="email"/><html:errors property="email"/><br/>						
 			intercode : <html:text property="intercode"/><html:errors property="intercode"/><br/>
 			phonenum : <html:text property="phonenum"/><html:errors property="phonenum"/><br/>
-			country :
+			country : <html:text property="country"/><html:errors property="phonenum"/><br/>
 			
 			<Strong>Occupancy</Strong><br/>
+			<% String ga =(String) session.getAttribute("gues_amount");
+				int i = 1,guest = Integer.parseInt(ga);
+				while(i <= guest){
+			%>
 			oc_title : <html:text property="oc_title"/><html:errors property="oc_title"/><br/>
 			oc_name_sure : <html:text property="oc_name_sure"/><html:errors property="oc_name_sure"/><br/>
-			
+			<% i++;
+			}%>
 
 			<Strong>Special request</Strong><br/>
 			special_request : <html:text property="special_request"/><html:errors property="special_request"/><br/>

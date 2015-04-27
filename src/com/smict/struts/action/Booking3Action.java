@@ -69,6 +69,9 @@ public class Booking3Action extends Action {
 		try {
 			booking_id = bk3dt.booking_table(room_id,check_in,check_out,cus_tit_name,cus_name_sure,cus_email,cus_intercode,cus_phonenum,cus_country);
 			
+			bk3dt.occupancy_table(booking_id,oc_title,oc_name_sure);
+			
+			bk3dt.request_table(booking_id, special_request);
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

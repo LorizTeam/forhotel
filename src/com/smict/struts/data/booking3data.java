@@ -16,14 +16,18 @@ public class booking3data {
 		return booking_id = rs.getString("pbooking_id");
 	}
 	
-	public void occupancy_table(String booking,String occupancy_title , String occupancy_name_sure){
+	public void occupancy_table(String booking,String occupancy_title , String occupancy_name_sure) throws ClassNotFoundException, SQLException{
 		dbconnect dbcon = new dbconnect();
 		Connection con = dbcon.DBconn_mysql();
-		String sqlQuery = "";
+		String sqlQuery = "call pro_ins_occupancy ("+booking+",'"+occupancy_title+"','"+occupancy_name_sure+"')";
 		Statement stmt = con.createStatement();
-		ResultSet rs = stmt.executeQuery(sqlQuery);
+		stmt.executeQuery(sqlQuery);
 	}
-	public void request_table(){
-		
+	public void request_table(String booking,String request_detail) throws ClassNotFoundException, SQLException{
+		dbconnect dbcon = new dbconnect();
+		Connection con = dbcon.DBconn_mysql();
+		String sqlQuery = "call pro_ins_request_table ("+booking+",'"+request_detail+"')";
+		Statement stmt = con.createStatement();
+		stmt.executeQuery(sqlQuery);
 	}
 }
