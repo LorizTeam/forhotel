@@ -19,7 +19,11 @@
 	<body class="container-fluid " >
 		<header id="index"  class="container row "style="height:130px; ">
 		<nav class="fix">
-			<div class="col-md-7">				
+			<div class="col-md-1"></div>
+			<div class="col-md-6">
+				<div class="col-md-4 pad">		
+					<img class="img-responsive" src="img/Logo.jpg" />
+				</div>
 			</div>
 			<div class="col-md-5">
 				<div class="row text-center">
