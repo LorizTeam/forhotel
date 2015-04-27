@@ -1,4 +1,4 @@
-<%@ page language="java" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%> 
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
 <%@ page import ="com.smict.struts.data.*"%>
@@ -27,15 +27,18 @@
 			country : <html:text property="country"/><html:errors property="phonenum"/><br/>
 			
 			<Strong>Occupancy</Strong><br/>
-			<% String ga =(String) session.getAttribute("gues_amount");
+			
+			<% String ga =(String) session.getAttribute("guest_amount");
 				int i = 1,guest = Integer.parseInt(ga);
-				while(i <= guest){
+				while(i <= guest){	
 			%>
+
 			oc_title : <html:text property="oc_title"/><html:errors property="oc_title"/><br/>
 			oc_name_sure : <html:text property="oc_name_sure"/><html:errors property="oc_name_sure"/><br/>
-			<% i++;
-			}%>
-
+			<%
+					i++;
+				}
+			%>
 			<Strong>Special request</Strong><br/>
 			special_request : <html:text property="special_request"/><html:errors property="special_request"/><br/>
 			

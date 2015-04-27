@@ -61,20 +61,7 @@
       type="com.smict.struts.action.Booking3Action">
       <set-property property="cancellable" value="false" />
     </action>
-    <action path="/booking3Start" type="com.smict.struts.action.Booking3StartAction">
-      <set-property property="cancellable" value="true" />
-      <forward name="success" path="/booking3.jsp" />
-    </action>
-    <action
-      attribute="booking1Form"
-      name="booking1Form"
-      path="/booking2Start"
-      scope="request"
-      type="com.smict.struts.action.Booking2StartAction">
-      <set-property property="cancellable" value="true" />
-      <forward name="room_not_empty" path="/room_not_empty.jsp" />
-      <forward name="success" path="/booking2.jsp" />
-    </action>
+    
 
   </action-mappings>
 

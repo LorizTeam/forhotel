@@ -44,6 +44,7 @@ public class Booking2Action extends Action {
 		Booking2Form booking2Form = (Booking2Form) form;
 		searchroomtypeid srtid = new searchroomtypeid();
 		String forwardText = "";
+		
 		/*
 		// TODO Auto-generated method stub
 		String submit = booking2Form.getSubmit();
