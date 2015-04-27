@@ -49,6 +49,8 @@ public class Booking3Form extends ActionForm {
 	private String name_sure;
 	private String room_id;
 	//for finish booking
+	//from booking2
+	private String roomtype_name,roomtype_picpath,roomtype_id;
 	//private String;
 	/*
 	 * Generated Methods
@@ -231,5 +233,23 @@ public class Booking3Form extends ActionForm {
 	}
 	public void setRoom_id(String roomId) {
 		room_id = roomId;
+	}
+	public String getRoomtype_name() {
+		return roomtype_name;
+	}
+	public void setRoomtype_name(String roomtypeName) {
+		roomtype_name = roomtypeName;
+	}
+	public String getRoomtype_picpath() {
+		return roomtype_picpath;
+	}
+	public void setRoomtype_picpath(String roomtypePicpath) {
+		roomtype_picpath = roomtypePicpath;
+	}
+	public String getRoomtype_id() {
+		return roomtype_id;
+	}
+	public void setRoomtype_id(String roomtypeId) {
+		roomtype_id = roomtypeId;
 	}
 }

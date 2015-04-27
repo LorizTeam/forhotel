@@ -48,7 +48,7 @@
       path="/booking2"
       scope="request"
       type="com.smict.struts.action.Booking2Action">
-      <set-property property="cancellable" value="false" />
+      <set-property property="cancellable" value="true" />
       <forward name="to_booking" path="/booking3.jsp" />
 
     </action>
@@ -59,7 +59,7 @@
       path="/booking3"
       scope="request"
       type="com.smict.struts.action.Booking3Action">
-      <set-property property="cancellable" value="false" />
+      <set-property property="cancellable" value="true" />
     </action>
     
 
