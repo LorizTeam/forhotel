@@ -12,7 +12,10 @@
 	</head>
 	<body>
 		<html:form action="/booking3">
-			<% String room_id = request.getParameter("room_id"); %>
+			<% 	String room_id = request.getParameter("room_id"); 
+				String roomtype_name = request.getParameter("roomtype_name");
+				String roomtype_picpath = request.getParameter("roomtype_picpath");
+			%>
 			
 			<html:hidden property="room_id" value="<%=room_id %>"/>
 			<Strong>Guest Detail</Strong><br/>
