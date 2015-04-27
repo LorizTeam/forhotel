@@ -49,15 +49,15 @@ public class Booking3Action extends Action {
 		String room_id = booking3Form.getRoom_id(),
 		check_in = (String) session.getAttribute("tcheck_in"),
 		check_out = (String) session.getAttribute("tcheck_out"),
-		guest_amount = (String) session.getAttribute("gues_amount"),
+		guest_amount = (String) session.getAttribute("guest_amount"),
 		
 		cus_tit_name = booking3Form.getTitle(),
 		cus_name_sure = booking3Form.getName_sure(),
 		cus_email = booking3Form.getEmail(),
-		cus_intercode = booking3Form.getIntercode(),
+		cus_intercode = booking3Form.getDial_code(),
 		cus_phonenum = booking3Form.getPhonenum(),
-		//cus_country = booking3Form.getCountry(),
-		cus_country = "THAILAND",
+		cus_country = booking3Form.getCountry(),
+		//cus_country = "THAILAND",
 		
 		//for occupancy_table
 		oc_title = booking3Form.getOc_title(),

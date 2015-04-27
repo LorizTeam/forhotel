@@ -37,7 +37,6 @@
 				    <html:option value="Ms.">Ms.</html:option>
 				    <html:option value="Dr. ">Dr. </html:option>
 		    		</html:select>
-    		<html:text property="title" /><html:errors property="title"/><br/>
 			name_sure : <html:text property="name_sure"/><html:errors property="name_sure"/><br/>
 			email : <html:text property="email"/><html:errors property="email"/><br/>						
 			intercode : <html:select property="dial_code">
@@ -55,7 +54,20 @@
 		    %>
     </html:select>
 			phonenum : <html:text property="phonenum"/><html:errors property="phonenum"/><br/>
-			country : <html:text property="country"/><html:errors property="phonenum"/><br/>
+			country : <html:select property="country">
+			<%
+    		if(request.getAttribute("show_country") != null){
+					List lrtd = (List)request.getAttribute("show_country");
+					for(Iterator iteritem = lrtd.iterator();iteritem.hasNext();){
+					
+						Booking3Form b3f= (Booking3Form) iteritem.next();
+			%>
+			<html:option value="<%=b3f.getCountry() %>"><%=b3f.getCountry() %></html:option>
+			<%
+					}
+			}
+			%>
+			</html:select>
 			
 			<Strong>Occupancy</Strong><br/>
 			
@@ -79,20 +91,7 @@
 			<Strong>Special request</Strong><br/>
 			special_request : <html:text property="special_request"/><html:errors property="special_request"/><br/>
 			
-			<html:select property="country">
-			<%
-    		if(request.getAttribute("show_country") != null){
-					List lrtd = (List)request.getAttribute("show_country");
-					for(Iterator iteritem = lrtd.iterator();iteritem.hasNext();){
-					
-						Booking3Form b3f= (Booking3Form) iteritem.next();
-			%>
-			<html:option value="<%=b3f.getCountry() %>"><%=b3f.getCountry() %></html:option>
-			<%
-					}
-			}
-			%>
-			</html:select>
+			
 			<html:submit/><html:cancel/>
 		</html:form>
 	</body>
