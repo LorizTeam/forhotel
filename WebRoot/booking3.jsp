@@ -49,8 +49,8 @@
 			
 			<html:select property="country">
 			<%
-    		if(request.getAttribute("countryForm2") != null){
-					List lrtd = (List)request.getAttribute("countryForm2");
+    		if(request.getAttribute("show_country") != null){
+					List lrtd = (List)request.getAttribute("show_country");
 					for(Iterator iteritem = lrtd.iterator();iteritem.hasNext();){
 					
 						Booking3Form b3f= (Booking3Form) iteritem.next();

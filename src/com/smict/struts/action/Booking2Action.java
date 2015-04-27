@@ -17,6 +17,7 @@ import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
 import com.smict.struts.data.searchroomtypeid;
+import com.smict.struts.data.showcountries;
 import com.smict.struts.form.Booking2Form;
 import com.smict.struts.form.Booking3Form;
 
@@ -53,6 +54,19 @@ public class Booking2Action extends Action {
 		room_id = request.getParameter("room_id");
 		roomtype_picpath = request.getParameter("roomtype_picpath");
 		roomtype_id = request.getParameter("roomtype_id");
+		
+		showcountries sct = new showcountries();
+		try {
+			List show_country=sct.show_countries();
+			request.setAttribute("show_country", show_country);
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		/*request.setAttribute("room_id", request.getParameter("room_id"));
 		request.setAttribute("roomtype_name", request.getParameter("roomtype_name"));
 		request.setAttribute("roomtype_picpath", request.getParameter("roomtype_picpath"));
