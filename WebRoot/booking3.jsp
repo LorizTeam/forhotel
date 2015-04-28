@@ -81,11 +81,7 @@
 					   <html:option value="Dr. ">Dr. </html:option>
 			    	   </html:select>
 			oc_name_sure : <html:text property="oc_name_sure"/>
-			<%
-					
-					i++;
-				}
-			%>
+
 			<Strong>Special request</Strong><br/>
 			special_request : <html:text property="special_request"/><html:errors property="special_request"/><br/>
 			
