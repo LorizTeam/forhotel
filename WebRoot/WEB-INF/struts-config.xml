@@ -9,6 +9,8 @@
     <form-bean name="booking2Form" type="com.smict.struts.form.Booking2Form" />
     <form-bean name="booking3Form" type="com.smict.struts.form.Booking3Form" />
     <form-bean name="detailbookingForm" type="com.smict.struts.form.DetailbookingForm" />
+    <form-bean name="employeeForm" type="com.smict.struts.form.EmployeeForm" />
+    
 
   </form-beans>
 
@@ -72,6 +74,16 @@
       type="com.smict.struts.action.DetailbookingAction">
       <set-property property="cancellable" value="true" />
     </action>
+    <action
+      attribute="employeeForm"
+      input="/employee/index1.jsp"
+      name="employeeForm"
+      path="/employee"
+      scope="request"
+      type="com.smict.struts.action.EmployeeAction">
+      <set-property property="cancellable" value="true" />
+    </action>
+    
     
 
   </action-mappings>
