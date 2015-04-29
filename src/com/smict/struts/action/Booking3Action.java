@@ -69,10 +69,18 @@ public class Booking3Action extends Action {
 		int loop_guest = Integer.parseInt(guest_amount);
 		booking3data bk3dt = new booking3data();
 		int i = 1 ;
-		String receiveoc ;
-		while(i < loop_guest){
-			receiveoc = booking3Form.getOc_name_sure();
-		}
+		String receiveoc = booking3Form.getOc_name_sure();
+		session.setAttribute("room_id", room_id);
+		session.setAttribute("cus_tit_name", cus_tit_name);
+		session.setAttribute("cus_name_sure", cus_name_sure);
+		session.setAttribute("cus_email", cus_email);
+		session.setAttribute("cus_intercode", cus_intercode);
+		session.setAttribute("cus_phonenum", cus_phonenum);
+		session.setAttribute("cus_country", cus_country);
+		session.setAttribute("oc_title", oc_title);
+		session.setAttribute("oc_name_sure", oc_name_sure);
+		session.setAttribute("special_request", special_request);
+		
 		try {
 			booking_id = bk3dt.booking_table(room_id,check_in,check_out,cus_tit_name,cus_name_sure,cus_email,cus_intercode,cus_phonenum,cus_country);
 			

@@ -15,6 +15,7 @@
     <form-bean name="cusphonebookForm" type="com.smict.struts.form.CusphonebookForm" />
     <form-bean name="cuscheckinForm" type="com.smict.struts.form.CuscheckinForm" />
     <form-bean name="cuscheckoutForm" type="com.smict.struts.form.CuscheckoutForm" />
+    <form-bean name="paypalForm" type="com.smict.struts.form.PaypalForm" />
     
 
   </form-beans>
@@ -68,7 +69,8 @@
       scope="request"
       type="com.smict.struts.action.Booking3Action">
       <set-property property="cancellable" value="true" />
-      <forward name="booking_success" path="/detailbooking.jsp" />
+      <forward name="booking_success" path="/paypal.jsp" />
+      
     </action>
     <action
       attribute="detailbookingForm"
@@ -139,6 +141,18 @@
       type="com.smict.struts.action.CuscheckoutAction">
       <set-property property="cancellable" value="true" />
     </action>
+    <action
+      attribute="paypalForm"
+      input="/paypal.jsp"
+      name="paypalForm"
+      path="/paypal"
+      scope="request"
+      type="com.smict.struts.action.PaypalAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="success" path="/detailbooking.jsp" />
+      
+    </action>
+    
     
     
 
