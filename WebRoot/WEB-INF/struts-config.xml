@@ -10,6 +10,11 @@
     <form-bean name="booking3Form" type="com.smict.struts.form.Booking3Form" />
     <form-bean name="detailbookingForm" type="com.smict.struts.form.DetailbookingForm" />
     <form-bean name="employeeForm" type="com.smict.struts.form.EmployeeForm" />
+    <form-bean name="empoverviewForm" type="com.smict.struts.form.EmpoverviewForm" />
+    <form-bean name="cuswalkinForm" type="com.smict.struts.form.CuswalkinForm" />
+    <form-bean name="cusphonebookForm" type="com.smict.struts.form.CusphonebookForm" />
+    <form-bean name="cuscheckinForm" type="com.smict.struts.form.CuscheckinForm" />
+    <form-bean name="cuscheckoutForm" type="com.smict.struts.form.CuscheckoutForm" />
     
 
   </form-beans>
@@ -81,6 +86,57 @@
       path="/employee"
       scope="request"
       type="com.smict.struts.action.EmployeeAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="success" path="/employee/empoverview.jsp" />
+      <forward name="false" path="/employee/index1.jsp" />
+    </action>
+    <action
+      attribute="empoverviewForm"
+      input="/employee/empoverview.jsp"
+      name="empoverviewForm"
+      path="/empoverview"
+      scope="request"
+      type="com.smict.struts.action.EmpoverviewAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="cuswalkin" path="/employee/cuswalkin.jsp" />
+      <forward name="cusphonebook" path="/employee/cusphonebook.jsp" />
+      <forward name="cuscheckin" path="/employee/cuscheckin.jsp" />
+      <forward name="cuscheckout" path="/employee/cuscheckout.jsp" />
+    </action>
+    <action
+      attribute="cuswalkinForm"
+      input="/employee/cuswalkin.jsp"
+      name="cuswalkinForm"
+      path="/cuswalkin"
+      scope="request"
+      type="com.smict.struts.action.CuswalkinAction">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="cusphonebookForm"
+      input="/employee/cusphonebook.jsp"
+      name="cusphonebookForm"
+      path="/cusphonebook"
+      scope="request"
+      type="com.smict.struts.action.CusphonebookAction">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="cuscheckinForm"
+      input="/employee/cuscheckin.jsp"
+      name="cuscheckinForm"
+      path="/cuscheckin"
+      scope="request"
+      type="com.smict.struts.action.CuscheckinAction">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="cuscheckoutForm"
+      input="/employee/cuscheckout.jsp"
+      name="cuscheckoutForm"
+      path="/cuscheckout"
+      scope="request"
+      type="com.smict.struts.action.CuscheckoutAction">
       <set-property property="cancellable" value="true" />
     </action>
     
