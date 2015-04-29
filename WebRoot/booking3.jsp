@@ -6,40 +6,67 @@
 <%@ page import ="java.util.*" %>
 <%@ page import ="java.sql.*" %>
 
-<html> 
-	<head>
-		<title></title>
-	</head>
-	<body>
-		<html:form action="/booking3">
-
+<!DOCTYPE html>
+<head>
+	<title>Room:Selection|Hotel.com</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.css">
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<html>
+	<body class="bbg">
+		<div class="container">
+			<div class="col-md-1"> </div>
+			<form class="col-md-10 frm thumbnail" method="post" action="">
+				<h1>Hotel.com | Booking</h1>
+				<ul class="nav nav-tabs nav-justified text-center">
+					<li><a href="booking.html">Choose a room</a></li>
+					<li ><a href="booking2.html">Enhance your stay</a></li>
+					<li class="active"><a href="#">Book !</a></li>
+				</ul>
+				<div class="progress">
+					<div class="progress-bar progress-bar-success" style="width: 68.1%">				
+ 					 </div>
+ 					 <div class="progress-bar progress-bar-striped active" 
+  					role="progressbar" aria-valuenow="31.9" aria-valuemin="0" 
+  					aria-valuemax="100" style="width: 31.9%">		
+  					</div>
+				</div>
+			
+		
 			<% 	
 				String roomtype_id = request.getParameter("roomtype_id");
 				String room_id = request.getParameter("room_id"); 
 				String roomtype_name = request.getParameter("roomtype_name");
 				String roomtype_picpath = request.getParameter("roomtype_picpath");
 			%>
-			<%=request.getParameter("roomtype_id") %>
-			<%=request.getParameter("room_id") %>
-			<%=request.getParameter("roomtype_name") %>
-			<%=request.getParameter("roomtype_picpath") %>
+			<div>
+				<h3>room details</h3>
+				<div class="row frmbg">					
+					<div class="col-md-4">
+						<%=room_id %> <%=roomtype_name %>
+					</div>
+					<div class="col-md-4">
+						<img class="img-responsive" alt="<%=roomtype_id %>" src="<%=roomtype_picpath %>">
+					</div>
+				</div>
+			</div>
+			<h3>Enter guest details</h3>
+			
+			
+			
+			<input type="hidden" name="room_id" value="<%=room_id %>"/>
 			<br/>
-			<%=roomtype_id %>
-			<%=room_id %>
-			<%=roomtype_name %>
-			<%=roomtype_picpath %>
-			<html:hidden property="room_id" value="<%=room_id %>"/>
-			<Strong>Guest Detail</Strong><br/>
-			title : <html:select property="title">
-				    <html:option value="Mr.">Mr.</html:option>
-				    <html:option value="Mrs.">Mrs.</html:option>
-				    <html:option value="Miss.">Miss.</html:option>
-				    <html:option value="Ms.">Ms.</html:option>
-				    <html:option value="Dr. ">Dr. </html:option>
-		    		</html:select>
-			name_sure : <html:text property="name_sure"/><html:errors property="name_sure"/><br/>
-			email : <html:text property="email"/><html:errors property="email"/><br/>						
-			intercode : <html:select property="dial_code">
+			Title : <select name="title">
+				    <option value="Mr.">Mr.</option>
+				    <option value="Mrs.">Mrs.</option>
+				    <option value="Miss.">Miss.</option>
+				    <option value="Ms.">Ms.</option>
+				    <option value="Dr. ">Dr. </option>
+		    		</select>
+			Name Lastname : <input type="text" name="name_sure"/><br/>
+			Email : <input type="email" name="email"/><br/>						
+			Intercode : <select name="dial_code">
     		<%
     			if(request.getAttribute("show_numcode") != null){
    				List lrtd = (List)request.getAttribute("show_numcode");
@@ -47,14 +74,14 @@
 		    
 		    	Booking3Form b3f= (Booking3Form) iteritem.next();
 		    %>
-		    <html:option value="<%=b3f.getTrue_calling() %>"><%=b3f.getDial_code() %></html:option>
+		    <option value="<%=b3f.getTrue_calling() %>"><%=b3f.getDial_code() %></option>
 		    <%
 		    		}
 		    	}
 		    %>
-    </html:select>
-			phonenum : <html:text property="phonenum"/><html:errors property="phonenum"/><br/>
-			country : <html:select property="country">
+    		</select>
+			Phonenum : <input type="text" name property="phonenum"/><br/>
+			Country : <select name="country">
 			<%
     		if(request.getAttribute("show_country") != null){
 					List lrtd = (List)request.getAttribute("show_country");
@@ -62,32 +89,33 @@
 					
 						Booking3Form b3f= (Booking3Form) iteritem.next();
 			%>
-			<html:option value="<%=b3f.getCountry() %>"><%=b3f.getCountry() %></html:option>
+			<option value="<%=b3f.getCountry() %>"><%=b3f.getCountry() %></option>
 			<%
 					}
 			}
 			%>
-			</html:select>
+			</select>
 			
 			<Strong>Occupancy</Strong><br/>
 			
 			
 
-			oc_title : <html:select property="oc_title">
-					   <html:option value="Mr.">Mr.</html:option>
-					   <html:option value="Mrs.">Mrs.</html:option>
-					   <html:option value="Miss.">Miss.</html:option>
-					   <html:option value="Ms.">Ms.</html:option>
-					   <html:option value="Dr. ">Dr. </html:option>
-			    	   </html:select>
-			oc_name_sure : <html:text property="oc_name_sure"/>
+			oc_title : <select name="oc_title">
+					   <option value="Mr.">Mr.</option>
+					   <option value="Mrs.">Mrs.</option>
+					   <option value="Miss.">Miss.</option>
+					   <option value="Ms.">Ms.</option>
+					   <option value="Dr. ">Dr. </option>
+			    	   </select>
+			oc_name_sure : <input type="text" name="oc_name_sure"/>
 
 			<Strong>Special request</Strong><br/>
-			special_request : <html:text property="special_request"/><html:errors property="special_request"/><br/>
+			special_request : <input type="text" name="special_request" required/>
 			
 			
-			<html:submit/><html:cancel/>
-		</html:form>
+			
+			</form>
+		</div>
 	</body>
 </html>
 
