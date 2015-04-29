@@ -45,13 +45,13 @@ public class Booking2Action extends Action {
 			HttpServletRequest request, HttpServletResponse response) {
 		Booking2Form booking2Form = (Booking2Form) form;
 		searchroomtypeid srtid = new searchroomtypeid();
+		HttpSession session = request.getSession();
 		String forwardText = "to_booking";
 		String room_id,roomtype_name,roomtype_picpath,roomtype_id;
 		// TODO Auto-generated method stub
 		//Booking3Form booking3Form = (Booking3Form) form;
-		
-		roomtype_name = request.getParameter("roomtype_name");
-		room_id = request.getParameter("room_id");
+		String check_in = (String) session.getAttribute("tcheck_in"),
+		check_out = (String) session.getAttribute("tcheck_out");
 		roomtype_picpath = request.getParameter("roomtype_picpath");
 		roomtype_id = request.getParameter("roomtype_id");
 		

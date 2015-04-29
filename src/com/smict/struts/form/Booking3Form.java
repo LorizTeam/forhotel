@@ -42,7 +42,6 @@ public class Booking3Form extends ActionForm {
 	//for loop occupancy
 	private String oc_title1,oc_title2,oc_title3,oc_title4,oc_title5,oc_title6,oc_title7,oc_title8,oc_title9,oc_title10;
 	private String oc_name_sure1,oc_name_sure2,oc_name_sure3,oc_name_sure4,oc_name_sure5,oc_name_sure6,oc_name_sure7,oc_name_sure8,oc_name_sure9,oc_name_sure10;
-
 	/** phonenum property */
 	private String phonenum;
 

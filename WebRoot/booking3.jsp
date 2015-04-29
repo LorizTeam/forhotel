@@ -39,7 +39,12 @@
 				String room_id = request.getParameter("room_id"); 
 				String roomtype_name = request.getParameter("roomtype_name");
 				String roomtype_picpath = request.getParameter("roomtype_picpath");
+				String roomtype_single_bed = request.getParameter("roomtype_single_bed");
+				String roomtype_double_bed = request.getParameter("roomtype_double_bed");
+				String price_total = request.getParameter("price_total");
+					
 			%>
+			<%=price_total %>
 			<div>
 				<h3>room details</h3>
 				<div class="row frmbg">					
@@ -111,9 +116,7 @@
 
 			<Strong>Special request</Strong><br/>
 			special_request : <input type="text" name="special_request" required/>
-			
-			
-			
+						
 			</form>
 		</div>
 	</body>

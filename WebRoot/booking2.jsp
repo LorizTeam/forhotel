@@ -80,6 +80,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							<div class="col-md-8 pad">
 							<%=b2f.getRoomtype_single_bed() %>x Single bed | 
 							<%=b2f.getRoomtype_double_bed() %>X Double bed</div>
+							<input name="roomtype_single_bed" type="hidden" value="<%=b2f.getRoomtype_single_bed() %>" />
+							<input name="roomtype_double_bed" type="hidden" value="<%=b2f.getRoomtype_double_bed() %>" />
 						</div>
 						<div class="row">
 							<div class="col-md-4 text-right pad"><strong>Guests:</strong></div>
@@ -88,6 +90,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<div class="row">
 							<div class="col-md-4 text-right pad"><strong>Av. price per night:</strong></div>
 							<div class="col-md-8 pad"><%=b2f.getRoomtype_price() %></div>
+							<input name="price_total" type="hidden" value="<%=b2f.getPrice_total() %>" />
+							
 						</div>
 						<div class="row">
 							<div class="col-md-4 text-right pad"></div>

@@ -21,7 +21,8 @@ public class Booking2Form extends ActionForm {
 	 * Generated Methods
 	 */
 	//------------------------------------------------for show
-	private String room_id,roomtype_id,roomtype_name,roomtype_desc,roomtype_detail,roomtype_single_bed,roomtype_double_bed,roomtype_guest,roomtype_price,pic_status,roomtype_picpath;
+	private String room_id,roomtype_id,roomtype_name,roomtype_desc,roomtype_detail,roomtype_single_bed,
+	roomtype_double_bed,roomtype_guest,roomtype_price,pic_status,roomtype_picpath,dayofbooking,price_total;
 
 	//------------------------------------------------for input
 	private String submit ;
@@ -43,6 +44,26 @@ public class Booking2Form extends ActionForm {
 		this.roomtype_price = i3;
 		this.pic_status = i4;
 		this.roomtype_picpath = i5;
+	}
+
+	public Booking2Form(String roomId, String roomtypeId, String roomtypeName,
+			String roomtypeDesc, String roomtypeDetail,
+			String roomtypeSingleBed, String roomtypeDoubleBed,
+			String roomtypeGuest, String roomtypePrice, String picStatus,
+			String roomtypePicpath, String pricetotal) {
+		// TODO Auto-generated constructor stub
+		this.room_id= roomId;
+		this.roomtype_id = roomtypeId;
+		this.roomtype_name = roomtypeName;
+		this.roomtype_desc = roomtypeDesc;
+		this.roomtype_detail = roomtypeDetail;
+		this.roomtype_single_bed = roomtypeSingleBed;
+		this.roomtype_double_bed = roomtypeDoubleBed;
+		this.roomtype_guest = roomtypeGuest;
+		this.roomtype_price = roomtypePrice;
+		this.pic_status = picStatus;
+		this.roomtype_picpath = roomtypePicpath;
+		this.price_total = pricetotal;
 	}
 
 	/** 
@@ -160,5 +181,21 @@ public class Booking2Form extends ActionForm {
 
 	public void setRoomtype_picpath(String roomtypePicpath) {
 		roomtype_picpath = roomtypePicpath;
+	}
+
+	public String getDayofbooking() {
+		return dayofbooking;
+	}
+
+	public void setDayofbooking(String dayofbooking) {
+		this.dayofbooking = dayofbooking;
+	}
+
+	public String getPrice_total() {
+		return price_total;
+	}
+
+	public void setPrice_total(String priceTotal) {
+		price_total = priceTotal;
 	}
 }
