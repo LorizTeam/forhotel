@@ -23,7 +23,7 @@
 				<input class="form-control" name="password" type="password" required placeholder="Please Enter  Password" />
 
 				<div class="text-right"><br />
-					<input class="btn btn-info form-control" name="submit"  value="Login" />
+					<button class="btn btn-info form-control" name="submit"  value="Login" >Login</button>
 				</div>
 
 			</form>

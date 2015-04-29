@@ -15,6 +15,8 @@
 	<body>
 		<form action="detailbooking.do">
 			<%
+								String scheck_in = (String) session.getAttribute("tcheck_in"),
+				scheck_out = (String) session.getAttribute("tcheck_out");
 				String roomtype_id = request.getParameter("roomtype_id");
 				String room_id = request.getParameter("room_id"); 
 				String roomtype_name = request.getParameter("roomtype_name");
