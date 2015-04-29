@@ -5,7 +5,7 @@
 <%@ page import ="javax.servlet.http.HttpServletResponse.*"%>
 <%@ page import ="javax.servlet.http.HttpSession.*"%>
  
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
 <head>
 	<title>Room:Selection|Hotel.com</title>
