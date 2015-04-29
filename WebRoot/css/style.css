@@ -76,3 +76,6 @@ body{
 .pad{
 	padding:10px;
 }
+.topping{
+	z-index:1;	
+}

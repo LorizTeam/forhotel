@@ -5,13 +5,27 @@
 <html> 
 	<head>
 		<title>JSP for EmployeeForm form</title>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+ 	 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.css">
+		<link rel="stylesheet" href="css/style.css" />
+		<link href="css/jqu.date.css" rel="stylesheet">
 	</head>
 	<body>
-		<html:form action="/employee">
-			username : <html:text property="username"/><html:errors property="username"/><br/>
-			password : <html:text property="password"/><html:errors property="password"/><br/>
-			<html:submit/><html:cancel/>
-		</html:form>
+		<form method="post" action="../employee.do">
+						<button name="submit" value="submit" class="btn btn-success radius topping" type="submit">
+						Submit
+						</button>
+						
+						<a href="#" class="btn btn-success radius topping">
+						Cancel
+						</a>
+						
+		</form>
 	</body>
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/datepicker.js"></script>
+	<script src="js/script1.js"></script>
 </html>
 

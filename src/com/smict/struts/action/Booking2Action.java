@@ -54,7 +54,8 @@ public class Booking2Action extends Action {
 		check_out = (String) session.getAttribute("tcheck_out");
 		roomtype_picpath = request.getParameter("roomtype_picpath");
 		roomtype_id = request.getParameter("roomtype_id");
-		
+		String pp = request.getParameter("price_total");
+		float doubleprice = Float.parseFloat(pp);
 		showcountries sct = new showcountries();
 		try {
 			List show_country=sct.show_countries();

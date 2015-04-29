@@ -26,6 +26,7 @@ public class EmployeeForm extends ActionForm {
 
 	/** password property */
 	private String password;
+	private String submit,cancel;
 
 	/*
 	 * Generated Methods
@@ -82,5 +83,21 @@ public class EmployeeForm extends ActionForm {
 	 */
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getSubmit() {
+		return submit;
+	}
+
+	public void setSubmit(String submit) {
+		this.submit = submit;
+	}
+
+	public String getCancel() {
+		return cancel;
+	}
+
+	public void setCancel(String cancel) {
+		this.cancel = cancel;
 	}
 }

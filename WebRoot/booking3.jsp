@@ -17,7 +17,7 @@
 	<body class="bbg">
 		<div class="container">
 			<div class="col-md-1"> </div>
-			<form class="col-md-10 frm thumbnail" method="post" action="">
+			<form class="col-md-10 frm thumbnail" method="post" action="booking3.do">
 				<h1>Hotel.com | Booking</h1>
 				<ul class="nav nav-tabs nav-justified text-center">
 					<li><a href="booking.html">Choose a room</a></li>

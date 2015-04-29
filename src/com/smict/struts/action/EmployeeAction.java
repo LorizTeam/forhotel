@@ -35,6 +35,21 @@ public class EmployeeAction extends Action {
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) {
 		EmployeeForm employeeForm = (EmployeeForm) form;// TODO Auto-generated method stub
+		
+		String submit = request.getParameter("submit");
+		String cancel = request.getParameter("cancel");
+		
+		if(submit != null){
+			
+			submit = "1";
+			
+		}else if (cancel != null){
+			
+			cancel = "2";
+			
+		}else{
+			cancel="ha";
+		}
 		return null;
 	}
 }
