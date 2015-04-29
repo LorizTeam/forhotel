@@ -15,7 +15,7 @@
 	<body>
 		<form method="post" action="../employee.do">
 						<input name="username" type="text" /><br/>
-						<input name="password" type="text" /><br/>
+						<input name="password" type="password" /><br/>
 					<button type="submit" class="btn btn-info" name="submit" value="submit" >Submit</button>
 					<a class="btn btn-info">Cancel</a>
 		</form>
