@@ -53,16 +53,18 @@ public class EmployeeAction extends Action {
 		if(submit != null){
 			try {
 				emp_detail = login.lempdetail(username, password);
-				//request.setAttribute("emp_detail", emp_detail);
+				request.setAttribute("emp_detail", emp_detail);
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+				forwardText = "false";
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+				forwardText = "false";
 			}
 		}else{
-			
+			forwardText = "false";
 		}
 		return mapping.findForward(forwardText);
 	}
