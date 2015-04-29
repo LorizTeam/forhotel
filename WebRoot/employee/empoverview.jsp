@@ -9,11 +9,107 @@
 <%@ page import ="javax.servlet.http.HttpServletResponse.*"%>
 <%@ page import ="javax.servlet.http.HttpSession.*"%>
  
-<html> 
+<!DOCTYPE html>
+<html>
 	<head>
-		<title>JSP for EmpoverviewForm form</title>
+		<title>Overview</title>
+		<link rel="stylesheet" href="../css/bootstrap.css" />
+		<link rel="stylesheet" href="../css/bootstrap-theme.css" />
+		<link rel="stylesheet" href="css/c.css"/>
+		 <link href="css/jqu.date.css" rel="stylesheet">
+		 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	</head>
-	<body>
+	<body class="bgc">
+		<%@include file="nav.jsp" %>
+		
+	<div class="container">
+	<div class="" align="center"><h3>Latest Booking</h3></div>
+	</div>
+	<div class="container">
+		<div class="thumbnail text-right">
+	<table class="table table-hover text-left">
+	
+	 <tr>
+     	<th>Booking ID</th>
+     	<th>Rooms No.</th>
+     	<th>Room Name</th>
+     	<th>Customer Name</th>
+     	<th>Check-in</th>
+     	<th>Check-Out</th>
+     	<th>Price</th>
+     	<th>Status</th>
+     </tr>
+     <tr>    	
+     	<td>1200003</td>
+     	<td>301</td>
+     	<td>Deluxe Room</td>
+     	<td>Smart ICT Co.Ltd</td>
+     	<td>20-12-2018</td>
+     	<td>01-1-2019</td>
+     	<td>300000.00</td>
+     	<td>Wait</td>
+     </tr>
+  	<tr>    	
+     	<td>1200004</td>
+     	<td>234</td>
+     	<td>Double Deluxe Room</td>
+     	<td>Smart ICT Co.Ltd</td>
+     	<td>20-12-2018</td>
+     	<td>01-1-2019</td>
+     	<td>400000.00</td>
+     	<td>Wait</td>
+     </tr>
+     
+	</table>
+	<a href="#"class="btn btn-info">More..</a>
+	</div>
+	</div>
+		
+	<div class="container">
+	<div class="" align="center"><h3>In use</h3></div>
+	</div>
+	<div class="container">
+		<div class="thumbnail text-right">
+	<table class="table table-hover text-left">
+	
+	 <tr>
+     	<th>Rooms No.</th>
+     	<th>Room Name</th>
+     	<th>Customer Name</th>
+     	<th>Tel.Room</th>
+     	<th>Status</th>
+     </tr>
+     <tr>    	
+     	<td>301</td>
+     	<td>Deluxe Room</td>
+     	<td>Smart ICT Co.Ltd</td>
+     	<td>02-920xxxx</td>
+     	<td>Active</td>
+     </tr>
+  	<tr>    	
+     	<td>302</td>
+     	<td>Deluxe Room</td>
+     	<td>Smart ICT Co.Ltd</td>
+     	<td>02-920xxxx</td>
+     	<td>Active</td>
+     </tr>
+     
+	</table>
+	<a href="#"class="btn btn-info">More..</a>
+	</div>
+	</div>
+	
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		<html:form action="/empoverview">
 		
 			<%	
@@ -38,6 +134,11 @@
 				}
 			%>
 		</html:form>
+	
+		<script src="../js/jquery-1.11.2.min.js"></script>
+		<script src="js/script1.js"></script>
+		<script src="js/datepicker.js"></script>	
+	
 	</body>
 </html>
 

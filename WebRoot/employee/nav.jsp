@@ -52,6 +52,12 @@
 				</div>			 				
 					
 			</form>
+			<div class="container">
+				<a class="btn btn-primary" href="empoverview.jsp">Overview</a>
+				<a class="btn btn-info" href="cusphonebook.jsp">Booking</a>
+				<a class="btn btn-success" href="cuscheckin.jsp">Check-In</a>
+				<a class="btn btn-warning" href="cuscheckout.jsp">Check-Out</a>
+			</div>
 		</nav>
 						
 		
