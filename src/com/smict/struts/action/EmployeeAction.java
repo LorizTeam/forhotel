@@ -3,6 +3,9 @@
  * Template path: templates/java/JavaClass.vtl
  */
 package com.smict.struts.action;
+import javax.servlet.http.HttpSession;
+import java.util.*;
+import java.sql.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -10,7 +13,11 @@ import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
+
+import com.smict.struts.data.Login;
 import com.smict.struts.form.EmployeeForm;
+
+
 
 /** 
  * MyEclipse Struts
@@ -34,22 +41,29 @@ public class EmployeeAction extends Action {
 	 */
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) {
-		EmployeeForm employeeForm = (EmployeeForm) form;// TODO Auto-generated method stub
+		EmployeeForm employeeForm = (EmployeeForm) form;
+		Login login = new Login();
+		String forwardText ="success";
+		// TODO Auto-generated method stub
 		
-		String submit = request.getParameter("submit");
-		String cancel = request.getParameter("cancel");
-		
+		String submit = request.getParameter("submit"),
+		username = request.getParameter("username"),
+		password = request.getParameter("password");
+		List emp_detail;
 		if(submit != null){
-			
-			submit = "1";
-			
-		}else if (cancel != null){
-			
-			cancel = "2";
-			
+			try {
+				emp_detail = login.lempdetail(username, password);
+				//request.setAttribute("emp_detail", emp_detail);
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}else{
-			cancel="ha";
+			
 		}
-		return null;
+		return mapping.findForward(forwardText);
 	}
 }

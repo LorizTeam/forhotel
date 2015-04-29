@@ -14,14 +14,10 @@
 	</head>
 	<body>
 		<form method="post" action="../employee.do">
-						<button name="submit" value="submit" class="btn btn-success radius topping" type="submit">
-						Submit
-						</button>
-						
-						<a href="#" class="btn btn-success radius topping">
-						Cancel
-						</a>
-						
+						<input name="username" type="text" /><br/>
+						<input name="password" type="text" /><br/>
+					<button type="submit" class="btn btn-info" name="submit" value="submit" >Submit</button>
+					<a class="btn btn-info">Cancel</a>
 		</form>
 	</body>
 	<script src="js/jquery-1.11.2.min.js"></script>
