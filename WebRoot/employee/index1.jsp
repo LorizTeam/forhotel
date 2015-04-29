@@ -2,23 +2,35 @@
 <%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%> 
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
  
-<html> 
-	<head>
-		<title>JSP for EmployeeForm form</title>
-		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
- 	 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="css/bootstrap.css">
-		<link rel="stylesheet" href="css/bootstrap-theme.css">
-		<link rel="stylesheet" href="css/style.css" />
-		<link href="css/jqu.date.css" rel="stylesheet">
+<!DOCTYPE html>
+<html>
+	<head>	
+		<title>Hotel:Reservation</title>
+		<link rel="stylesheet" href="../css/bootstrap.css">
+		<link rel="stylesheet" href="../css/bootstrap-theme.css">		
+		<link rel="stylesheet" href="css/c.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
 	</head>
-	<body>
-		<form method="post" action="../employee.do">
-						<input name="username" type="text" /><br/>
-						<input name="password" type="password" /><br/>
-					<button type="submit" class="btn btn-info" name="submit" value="submit" >Submit</button>
-					<a class="btn btn-info">Cancel</a>
-		</form>
+	<body class="bgc">
+		<div class="hidden-xs"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div>
+		<h4 class="text-center" align="center">Hotel Reservation Room</h4>
+		<div class="row ">
+			<div class="col-md-5" align="center"></div>
+			<form class="form-horizontal frm-login col-md-2 text-center thumbnail" method="post" action="../employee.do"><br />
+				<label class="text-center"> Username</label>
+				<input class="form-control" name="username" type="text" required placeholder="Please Enter Username" /><br />
+				<label class="center"> Password</label>
+				<input class="form-control" name="password" type="password" required placeholder="Please Enter  Password" />
+
+				<div class="text-right"><br />
+					<input class="btn btn-info form-control" name="submit"  value="Login" />
+				</div>
+
+			</form>
+
+			<div class="col-md-4"></div>
+		</div>
+		
 	</body>
 	<script src="js/jquery-1.11.2.min.js"></script>
 	<script src="js/datepicker.js"></script>
