@@ -89,7 +89,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						</div>
 						<div class="row">
 							<div class="col-md-4 text-right pad"><strong>Av. price per night:</strong></div>
-							<div class="col-md-8 pad"><%=b2f.getRoomtype_price() %></div>
+							<div class="col-md-8 pad"><%=b2f.getRoomtype_price() %>.- $</div>
 							<input name="price_total" type="hidden" value="<%=b2f.getPrice_total() %>" />
 							
 						</div>

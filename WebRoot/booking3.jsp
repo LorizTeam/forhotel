@@ -56,8 +56,8 @@
 				<div class="col-md-7">
 						<div class="row">
 							<div class="col-md-4 text-right pad"><strong>Room No:</strong></div>
-							<div class="col-md-8 pad"><%=roomtype_id %></div>
-							<input name="roomtype_id" type="hidden" value="<%=roomtype_id  %>" />
+							<div class="col-md-8 pad"><%=room_id %></div>
+							<input name="roomtype_id" type="hidden" value="<%=room_id  %>" />
 						</div>
 						<div class="row">
 							<div class="col-md-4 text-right pad"><strong>Room Type:</strong></div>
@@ -75,7 +75,7 @@
 						
 						<div class="row">
 							<div class="col-md-4 text-right pad"><strong>total price:</strong></div>
-							<div class="col-md-8 pad"><%=price_total %></div>
+							<div class="col-md-8 pad"><%=price_total %>.- $</div>
 							<input name="price_total" type="hidden" value="<%=price_total %>" />
 							<input type="hidden" name="room_id" value="<%=room_id %>"/>
 						</div>
@@ -172,7 +172,7 @@
 			 but we will do our best to meet your requirements.</p>
 			<div class="row"> 
 				<div class="form-group col-md-5">
-			    <label>Title</label>		    
+			    <label>Request</label>		    
 			    	<input  class="form-control" type="text" name="special_request" required/>	
 			    </div>
 			</div>

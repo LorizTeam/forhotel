@@ -27,6 +27,7 @@ public class PaypalForm extends ActionForm {
 	 * @param request
 	 * @return ActionErrors
 	 */
+	private String submit,cancel;
 	public ActionErrors validate(ActionMapping mapping,
 			HttpServletRequest request) {
 		// TODO Auto-generated method stub
@@ -40,5 +41,21 @@ public class PaypalForm extends ActionForm {
 	 */
 	public void reset(ActionMapping mapping, HttpServletRequest request) {
 		// TODO Auto-generated method stub
+	}
+
+	public String getSubmit() {
+		return submit;
+	}
+
+	public void setSubmit(String submit) {
+		this.submit = submit;
+	}
+
+	public String getCancel() {
+		return cancel;
+	}
+
+	public void setCancel(String cancel) {
+		this.cancel = cancel;
 	}
 }

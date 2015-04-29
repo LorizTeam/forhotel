@@ -150,6 +150,7 @@
       type="com.smict.struts.action.PaypalAction">
       <set-property property="cancellable" value="true" />
       <forward name="success" path="/detailbooking.jsp" />
+      <forward name="false" path="/paypal.jsp" />
       
     </action>
     

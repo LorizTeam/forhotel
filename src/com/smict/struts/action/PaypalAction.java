@@ -34,7 +34,16 @@ public class PaypalAction extends Action {
 	 */
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) {
-		PaypalForm paypalForm = (PaypalForm) form;// TODO Auto-generated method stub
-		return null;
+		PaypalForm paypalForm = (PaypalForm) form;
+		String forwardText ="";
+		// TODO Auto-generated method stub
+		String submit = paypalForm.getSubmit();
+		
+		if(submit != null){
+			forwardText="success";
+		}else{
+			forwardText="false";
+		}
+		return mapping.findForward(forwardText);
 	}
 }
