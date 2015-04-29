@@ -5,7 +5,9 @@
 <%@ page import ="com.smict.struts.form.*"%>
 <%@ page import ="java.util.*" %>
 <%@ page import ="java.sql.*" %>
-
+<%@ page import ="javax.servlet.http.HttpServletRequest.*"%>
+<%@ page import ="javax.servlet.http.HttpServletResponse.*"%>
+<%@ page import ="javax.servlet.http.HttpSession.*"%>
 <!DOCTYPE html>
 <head>
 	<title>Room:Selection|Hotel.com</title>
@@ -35,6 +37,8 @@
 			
 		
 			<% 	
+				String scheck_in = (String) session.getAttribute("tcheck_in"),
+				scheck_out = (String) session.getAttribute("tcheck_out");
 				String roomtype_id = request.getParameter("roomtype_id");
 				String room_id = request.getParameter("room_id"); 
 				String roomtype_name = request.getParameter("roomtype_name");
@@ -58,6 +62,14 @@
 							<div class="col-md-4 text-right pad"><strong>Room No:</strong></div>
 							<div class="col-md-8 pad"><%=room_id %></div>
 							<input name="roomtype_id" type="hidden" value="<%=room_id  %>" />
+						</div>
+						<div class="row">
+							<div class="col-md-4 text-right pad"><strong>Date Checkin:</strong></div>
+							<div class="col-md-8 pad"><%=scheck_in %> 14:00</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4 text-right pad"><strong>Date Checkout:</strong></div>
+							<div class="col-md-8 pad"><%=scheck_out %> 12:00</div>
 						</div>
 						<div class="row">
 							<div class="col-md-4 text-right pad"><strong>Room Type:</strong></div>
