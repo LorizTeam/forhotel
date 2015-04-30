@@ -81,7 +81,7 @@
 							<div class="col-md-8 pad">
 							<%=roomtype_single_bed %>x Single bed | 
 							<%=roomtype_double_bed  %>X Double bed</div>
-							<input name="roomtype_single_bed" type="hidden" value="<%=roomtype_single_bed  %>" />
+							<input name="roomtype_single_bed" type="hidden" value="<%=roomtype_double_bed  %>" />
 							<input name="roomtype_double_bed" type="hidden" value="<%=roomtype_double_bed  %>" />
 						</div>
 						
