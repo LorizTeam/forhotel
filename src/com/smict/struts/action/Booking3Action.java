@@ -58,6 +58,11 @@ public class Booking3Action extends Action {
 		cus_intercode = booking3Form.getDial_code(),
 		cus_phonenum = booking3Form.getPhonenum(),
 		cus_country = booking3Form.getCountry(),
+		roomtype_picpath = booking3Form.getRoomtype_picpath(),
+		roomtype_single_bed = booking3Form.getRoomtype_single_bed(),
+		roomtype_double_bed = booking3Form.getRoomtype_double_bed(),
+		price_total = booking3Form.getPrice_total(),
+		roomtype_name = booking3Form.getRoomtype_name(),
 		//cus_country = "THAILAND",
 		
 		//for occupancy_table
@@ -80,7 +85,11 @@ public class Booking3Action extends Action {
 		session.setAttribute("oc_title", oc_title);
 		session.setAttribute("oc_name_sure", oc_name_sure);
 		session.setAttribute("special_request", special_request);
-		
+		session.setAttribute("roomtype_picpath", roomtype_picpath);
+		//session.setAttribute("roomtype_single_bed", roomtype_single_bed);
+		session.setAttribute("roomtype_double_bed",roomtype_double_bed);
+		session.setAttribute("price_total",price_total);
+		session.setAttribute("roomtype_name",roomtype_name);
 		try {
 			booking_id = bk3dt.booking_table(room_id,check_in,check_out,cus_tit_name,cus_name_sure,cus_email,cus_intercode,cus_phonenum,cus_country);
 			
