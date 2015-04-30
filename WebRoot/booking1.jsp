@@ -73,7 +73,6 @@
 					
 					<div class="col-sm-3">	
 						<html:select property="people_booking"  >
-							<option><%=people_booking %></option>
 							<option>1</option>
 							<option>2</option>
 							<option>3</option>
