@@ -70,7 +70,7 @@ body{
 .footer{
 	margin-top:40px;
 }
-#gallery{
+.gal{
 	color:black;
 }
 .pad{
@@ -78,4 +78,7 @@ body{
 }
 .topping{
 	z-index:1;	
+}
+.space{
+	min-height:130px;
 }

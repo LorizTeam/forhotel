@@ -20,10 +20,10 @@
 		<div class="container">
 			<div class="col-md-1"> </div>
 			<form class="col-md-10 frm thumbnail" method="post" action="booking3.do">
-				<h1>rHotel.com | Booking</h1>
+				<h1>Hotel.com | Booking</h1>
 				<ul class="nav nav-tabs nav-justified text-center">
-					<li><a href="booking.html">Choose a room</a></li>
-					<li ><a href="booking2.html">Enhance your stay</a></li>
+					<li><a href="booking1.jsp">Choose a room</a></li>
+					<li ><a href="booking1.jsp">Enhance your stay</a></li>
 					<li class="active"><a href="#">Book !</a></li>
 				</ul>
 				<div class="progress">
@@ -97,7 +97,7 @@
 			<div class="row">
 			  <div class="form-group col-md-2">
 			    <label>Title</label>
-			   <select class="form-control" name="title">
+			   <select class="form-control" name="title" >
 				    <option value="Mr.">Mr.</option>
 				    <option value="Mrs.">Mrs.</option>
 				    <option value="Miss.">Miss.</option>
@@ -107,11 +107,11 @@
 			  </div>
 				 <div class="form-group  col-md-5">
 			    <label>First name and Last name </label>
-			   	<input class="form-control" type="text" name="name_sure"/>
+			   	<input class="form-control" type="text" name="name_sure" required>
 			  </div>
 			   <div class="form-group col-md-5">
 			    <label>E-mail</label>
-			   	 <input class="form-control" type="email" name="email"/>
+			   	 <input class="form-control" type="email" name="email"required>
 			  </div>
 			</div>
 			<div class="row">
@@ -135,7 +135,7 @@
     			</div>
 			    <div class="form-group  col-md-5">
 			    	<label>Telephone number</label>
-			    	<input class="form-control" type="text" name="phonenum"/>
+			    	<input class="form-control" type="text" name="phonenum" required>
 			    </div>
 			</div>
 			 <div class="row">
@@ -185,7 +185,7 @@
 			<div class="row"> 
 				<div class="form-group col-md-5">
 			    <label>Request</label>		    
-			    	<input  class="form-control" type="text" name="special_request" required/>	
+			    	<input  class="form-control" type="text" name="special_request"/>	
 			    </div>
 			</div>
 			
@@ -197,7 +197,7 @@
 			  If cancelled 1 day before check-in, the first night without extras is charged. In the event of a no-show, 
 			  100% of the booking amount is charged.</p>
 			  <br/>
-			  <input class="" type="checkbox" value="accept"> I have read the <a href="#">Sales terms and conditions</a>
+			  <input class="" type="checkbox" value="accept" required> I have read the <a href="#">Sales terms and conditions</a>
 			   and confirm that I agree and understand to them.
 			<div class="row">
 				<div class="form-group col-md-7">		    		    

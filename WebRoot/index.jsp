@@ -98,8 +98,8 @@
 		<!---------------------------1 page----------------------------------->
 		<!---------------------------2 page----------------------------------->
 			
-	
-		<div class="container-fluid  " id="gallery">	
+		<div class="space" id="gallery"></div>
+		<div class="container  gal thumbnail">	
 			<div class="container">	
 			<div class="row">	
 			<h2>Gallery</h2>
@@ -161,11 +161,13 @@
 			</div>			
 		</div>
 		<!---------------------------2 page----------------------------------->
+		<div class="space" id="map"></div>
 		<!---------------------------3 page----------------------------------->
-		<div class="container-fluid bg " id="map">				
+		<div class="container-fluid bg " >				
 			<div class="row-fluid">
 				<div class="col-md-1"></div>
 				<div class="col-md-10">
+				<br>
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3873.3143632380406!2d100.45519929122301!3d13.880141916273555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0xa5cb986140f40f70!2z4Lia4LmJ4Liy4LiZ4LmA4Lit4Li34LmJ4Lit4Lit4Liy4LiX4Lij4LiX4LmI4Liy4Lit4Li04LiQ!5e0!3m2!1sen!2sth!4v1429707913879" width="100%" height="500" frameborder="0" style="border:0"></iframe>
 				</div>
 			</div>		
