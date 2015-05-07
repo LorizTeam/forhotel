@@ -53,7 +53,7 @@ public class Booking3Form extends ActionForm {
 	private String room_id;
 	//for finish booking
 	//from booking2
-	private String roomtype_name,roomtype_picpath,roomtype_id,dial_code,true_calling;
+	private String roomtype_name,roomtype_picpath,roomtype_id,dial_code,true_calling,roomtype_single_bed,roomtype_double_bed,price_total;
 	//private String;
 	/*
 	 * Generated Methods
@@ -395,5 +395,23 @@ public class Booking3Form extends ActionForm {
 	}
 	public void setOc_name_sure10(String ocNameSure10) {
 		oc_name_sure10 = ocNameSure10;
+	}
+	public String getRoomtype_single_bed() {
+		return roomtype_single_bed;
+	}
+	public void setRoomtype_single_bed(String roomtypeSingleBed) {
+		roomtype_single_bed = roomtypeSingleBed;
+	}
+	public String getRoomtype_double_bed() {
+		return roomtype_double_bed;
+	}
+	public void setRoomtype_double_bed(String roomtypeDoubleBed) {
+		roomtype_double_bed = roomtypeDoubleBed;
+	}
+	public String getPrice_total() {
+		return price_total;
+	}
+	public void setPrice_total(String priceTotal) {
+		price_total = priceTotal;
 	}
 }

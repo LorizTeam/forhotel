@@ -9,7 +9,7 @@ public class booking3data {
 		String booking_id;
 		checkIn = "2015-05-01"; 
 		checkOut = "2015-05-06";
-		String sqlQuery = "call pro_booking ("+roomId+",'"+checkIn+" 00:00:00','"+checkOut+" 00:00:00','"+cusTitName+"','"+cusNameSure+"','"+cusEmail+"','"+cusIntercode+"','"+cusPhonenum+"','"+cusCountry+"');";
+		String sqlQuery = "call pro_booking ("+roomId+",'"+checkIn+" 14:00:00','"+checkOut+" 12:00:00','"+cusTitName+"','"+cusNameSure+"','"+cusEmail+"','"+cusIntercode+"','"+cusPhonenum+"','"+cusCountry+"');";
 		Statement stmt = con.createStatement();
 		ResultSet rs = stmt.executeQuery(sqlQuery);
 		rs.next();
