@@ -50,6 +50,7 @@ public class EmployeeAction extends Action {
 		username = request.getParameter("username"),
 		password = request.getParameter("password");
 		List emp_detail;
+		int i = 1;
 		if(submit != null){
 			try {
 				emp_detail = login.lempdetail(username, password);
