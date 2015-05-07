@@ -47,8 +47,8 @@ public class Booking1Action extends Action {
 		String tcheck_in = request.getParameter("from"),
 		tcheck_out= request.getParameter("to"),
 		guest_amount = booking1Form.getPeople_booking(),
-		submit = booking1Form.getSubmit();
-		int checkroom;
+		submit = booking1Form.getSubmit(),
+		checkroom = "0";
 		booking1data bk1dt = new booking1data();
 		String forwardText = "";
 		HttpSession session = request.getSession();
@@ -60,11 +60,11 @@ public class Booking1Action extends Action {
 				List lsearchroom = bk1dt.searchroom_empty(tcheck_in, tcheck_out, guest_amount);
 				request.setAttribute("booking2Form", lsearchroom);
 				if (lsearchroom.size() > 0){
-					checkroom = 0;
+					checkroom = "0";
 					session.setAttribute("checkroom", checkroom);
 					forwardText = "roomempty";
 				}else{
-					checkroom = 1;
+					checkroom = "1";
 					session.setAttribute("checkroom", checkroom);
 					forwardText = "room_not_empty";
 				}

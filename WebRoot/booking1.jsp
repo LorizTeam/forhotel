@@ -23,16 +23,17 @@
 		<html:form action="/booking1">
 		<div class="col-md-10 thumbnail frm">
 		<% 
-		String date_check_in = "",date_check_out = "",people_booking = "",alrmessage="";
-		Integer checkroom = 0;
+		String date_check_in = "",date_check_out = "",people_booking = "",alrmessage="",
+		checkroom = "0";
 		if ( session != null){
 			date_check_in = (String) session.getAttribute("tcheck_in");
 			date_check_out = (String) session.getAttribute("tcheck_out");
 			people_booking = (String) session.getAttribute("gues_amount");
-			checkroom = (Integer) session.getAttribute("checkroom");
+			checkroom = (String) session.getAttribute("checkroom");
+
 		}
-		if (checkroom > 0){
-		alrmessage = "Room not empty in your pick date";
+		if (checkroom == "1"){
+			alrmessage = "Room not empty in your pick date";
 		}
 		 %>
 			
