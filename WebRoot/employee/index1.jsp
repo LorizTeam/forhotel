@@ -23,7 +23,7 @@
 				<input class="form-control" name="password" type="password" required placeholder="Please Enter  Password" />
 
 				<div class="text-right"><br />
-					<button class="btn btn-info form-control" name="submit"  value="Login" >Login</button>
+					<a href="empoverview.jsp" class="btn btn-info form-control" name="submit"  value="Login" >Login</a>
 				</div>
 
 			</form>

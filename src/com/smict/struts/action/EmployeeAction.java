@@ -43,7 +43,7 @@ public class EmployeeAction extends Action {
 			HttpServletRequest request, HttpServletResponse response) {
 		EmployeeForm employeeForm = (EmployeeForm) form;
 		Login login = new Login();
-		String forwardText ="success";
+		String forwardText ="";
 		// TODO Auto-generated method stub
 		
 		String submit = request.getParameter("submit"),
@@ -54,6 +54,8 @@ public class EmployeeAction extends Action {
 			try {
 				emp_detail = login.lempdetail(username, password);
 				request.setAttribute("emp_detail", emp_detail);
+				forwardText ="success";
+				
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
