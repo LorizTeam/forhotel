@@ -77,6 +77,49 @@
 			</nav>
 		</nav>
 		
+		<form class="thumbnail frmbg"  method="post" action="booking2.do">
+				<div class="row">
+					<div class="col-md-5">
+						<a href="#">
+							<img src="" class="img-responsive thumbnail">
+						</a> 
+					</div>
+					<div class="col-md-7">
+						<div class="row">
+							<div class="col-md-4 text-right pad"><strong>Room No:</strong></div>
+							<div class="col-md-8 pad"><%=b2f.getRoom_id() %></div>
+						
+							
+						</div>
+						<div class="row">
+							<div class="col-md-4 text-right pad"><strong>Room Type:</strong></div>
+							<div class="col-md-8 pad"><%=b2f.getRoomtype_name() %></div>
+							
+						</div>
+						<div class="row">
+							<div class="col-md-4 text-right pad"><strong>Bedding:</strong></div>
+							<div class="col-md-8 pad">
+							<%=b2f.getRoomtype_single_bed() %>x Single bed | 
+							<%=b2f.getRoomtype_double_bed() %>X Double bed</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4 text-right pad"><strong>Guests:</strong></div>
+							<div class="col-md-8 pad"><%=b2f.getRoomtype_guest() %></div>						
+						</div>
+						<div class="row">
+							<div class="col-md-4 text-right pad"><strong>Av. price per night:</strong></div>
+							<div class="col-md-8 pad"><%=b2f.getRoomtype_price() %>.- $</div>
+							
+						</div>
+						<div class="row">
+							<div class="col-md-4 text-right pad"></div>
+							<div class="col-md-8 pad">
+								<button type="submit" class="btn btn-info" ><%=avail %></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				</form>	
 
 
 
