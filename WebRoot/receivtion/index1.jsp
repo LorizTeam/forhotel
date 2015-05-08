@@ -22,7 +22,7 @@
 		<h4 class="text-center" align="center"><font color="white">Hotel Reservation Room</font></h4>
 		<div class="row ">
 			<div class="col-md-5" align="center"></div>
-			<form class="form-horizontal frm-login col-md-2 thumbnail" method="post" action="rev_booking.html"><br />
+			<form class="form-horizontal frm-login col-md-2 thumbnail" method="post" action="overview.jsp"><br />
 				<label class="text-left"> Username</label>
 				<input class="form-control" name="username" type="text" required placeholder="Please Enter Username" /><br />
 				<label class="text-left"> Password</label>

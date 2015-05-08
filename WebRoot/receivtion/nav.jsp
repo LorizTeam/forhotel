@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Smart-Hotel</title>
-		<meta charset="UTF-8" />
+		<title>nav</title>
 		<link rel="stylesheet" href="../css/bootstrap.css" />
 		<link rel="stylesheet" href="../css/bootstrap-theme.css" />
 		<link rel="stylesheet" href="css/c.css"/>
@@ -18,10 +17,15 @@
 					<h1>Online Reservation System<small></small></h1>
 				</div>					
 			</div>
-			<form class=" bgb">
+			<form class=" bgb" action="search.jsp">
+			
 				<div class="container-fluid">
+					
 					<div class="row">
-						<div class="col-sm-1"></div>
+					<style>
+						.s{font-size:30px;}
+					</style>
+						<div class="col-sm-2 text-right"><span  class="w s ">Walk in</span></div>
 						<div class="col-sm-1  w"><i class="glyphicon glyphicon-ok-sign"></i> CHECK IN</div>
 							<div class="col-sm-2">
 								<div class="form-group">
@@ -39,6 +43,7 @@
 							</div>
 							
 						</div>
+						
 						<div class="col-sm-1 text-right w"><i class="glyphicon glyphicon-user"> </i> Guests</div>
 						<div class="col-sm-1">	
 							<select class="form-control" >
@@ -63,12 +68,14 @@
 			<nav class="navbar navbar-default container">
 			  <div class="container-fluid">
 			    <ul class="nav navbar-nav navbar-left">
-			    	<li><a href="#">Overview</a></li>
-			    	<li><a href="customer.html">Customer</a></li>
-			    	<li><a href="room.html">Room</a></li>
+			    	<li><a href="overview.jsp">Overview</a></li>
+			    	<li><a href="searchChkin.jsp">Check in</a></li>
+			    	<li><a href="customer.jsp">Customer</a></li>
+			    	<li><a href="room.jsp">Room</a></li>
+			    	
 			    </ul>
 			    <ul class="nav navbar-nav navbar-right">
-			    	<li><a href="#">
+			    	<li><a href="index1.jsp">
 			    		<i class="glyphicon glyphicon-remove-circle"></i>
 			    		Sign out
 			    	</a></li>
@@ -76,68 +83,17 @@
 			  </div>
 			</nav>
 		</nav>
-		
-		<form class="thumbnail frmbg"  method="post" action="booking2.do">
-				<div class="row">
-					<div class="col-md-5">
-						<a href="#">
-							<img src="" class="img-responsive thumbnail">
-						</a> 
-					</div>
-					<div class="col-md-7">
-						<div class="row">
-							<div class="col-md-4 text-right pad"><strong>Room No:</strong></div>
-							<div class="col-md-8 pad"><%=b2f.getRoom_id() %></div>
 						
-							
-						</div>
-						<div class="row">
-							<div class="col-md-4 text-right pad"><strong>Room Type:</strong></div>
-							<div class="col-md-8 pad"><%=b2f.getRoomtype_name() %></div>
-							
-						</div>
-						<div class="row">
-							<div class="col-md-4 text-right pad"><strong>Bedding:</strong></div>
-							<div class="col-md-8 pad">
-							<%=b2f.getRoomtype_single_bed() %>x Single bed | 
-							<%=b2f.getRoomtype_double_bed() %>X Double bed</div>
-						</div>
-						<div class="row">
-							<div class="col-md-4 text-right pad"><strong>Guests:</strong></div>
-							<div class="col-md-8 pad"><%=b2f.getRoomtype_guest() %></div>						
-						</div>
-						<div class="row">
-							<div class="col-md-4 text-right pad"><strong>Av. price per night:</strong></div>
-							<div class="col-md-8 pad"><%=b2f.getRoomtype_price() %>.- $</div>
-							
-						</div>
-						<div class="row">
-							<div class="col-md-4 text-right pad"></div>
-							<div class="col-md-8 pad">
-								<button type="submit" class="btn btn-info" ><%=avail %></button>
-							</div>
-						</div>
-					</div>
-				</div>
-				</form>	
-
-
-
-
-
-
-
 		
 		
 		
-		<footer class="text-center thumbnail">
-			Smart-Hotel.com 
-		</footer>
-	<script src="../js/jquery-1.11.2.min.js"></script>
-	<script src="../js/bootstrap.js"></script>
+		<script src="../js/jquery-1.11.2.min.js"></script>
 		<script src="js/script1.js"></script>
 		<script src="js/datepicker.js"></script>	
 		
+				
+	
+				
 	
 	</body>
 </html>

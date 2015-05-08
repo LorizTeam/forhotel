@@ -12,89 +12,24 @@
   		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	</head>
 	<body class="bgc">
-		<nav >
-			<div class=" receiv">
-				<div class="container ">
-					<img src="../img/logo.png" class="col-md-2"/>
-					<h1>Online Reservation System<small></small></h1>
-				</div>					
-			</div>
-			<form class=" bgb">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-sm-1"></div>
-						<div class="col-sm-1  w"><i class="glyphicon glyphicon-ok-sign"></i> CHECK IN</div>
-							<div class="col-sm-2">
-								<div class="form-group">
-									<span class="form-control w" id="fromDisplay" name="from">Check in</span>
-									<input type="hidden" name="from" value="" id="fromInput" required>
-									<div class="vf-datepicker" id="startDP"></div>
-								</div>
-							</div>
-						<div class="col-sm-1 text-right w"><i class="glyphicon glyphicon glyphicon-remove-sign"></i> CHECK OUT</div>
-						<div class="col-sm-2">
-							<div class="form-group">	
-								<span class="form-control w" id="toDisplay">Check out</span>
-								<input type="hidden" name="to" value="" id="toInput"required>
-								<div class="vf-datepicker" id="endDP"></div>
-							</div>
-							
-						</div>
-						<div class="col-sm-1 text-right w"><i class="glyphicon glyphicon-user"> </i> Guests</div>
-						<div class="col-sm-1">	
-							<select class="form-control" >
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-								<option>6</option>
-								<option>7</option>
-								<option>8</option>
-								<option>9</option>
-							</select>
-						</div>
-						<div class="col-sm-1 ">
-							<button class="btn btn-success radius"type="submit">Check availability<i class="glyphicon glyphicon-chevron-right"></i></button>
-						</div>						
-					</div>
-				</div>			 				
-					
-			</form>
-			<nav class="navbar navbar-default container">
-			  <div class="container-fluid">
-			    <ul class="nav navbar-nav navbar-left">
-			    	<li><a href="#">Overview</a></li>
-			    	<li><a href="customer.html">Customer</a></li>
-			    	<li><a href="room.html">Room</a></li>
-			    </ul>
-			    <ul class="nav navbar-nav navbar-right">
-			    	<li><a href="#">
-			    		<i class="glyphicon glyphicon-remove-circle"></i>
-			    		Sign out
-			    	</a></li>
-			    </ul>
-			  </div>
-			</nav>
-		</nav>
-		
-		
+		<%@include file="nav.jsp" %>
+		<h2 class="text-center text-primary">Rooms list</h2>
 		<div class="container-fluid">
 		<div class="row ">
 			
-			<form class="container"method="post" action="index.html">
+			<form class="container"method="post" action="index.jsp">
 			<div class=" navbar navbar-default col-md-10 navcus">
 			<div class="navbar-header">
 		      <a class="navbar-brand" href="#">
-		        <span class="text-primary"><strong>Room Type</span></strong>
+		        <span class="text-primary"><strong>Rooms list</span></strong>
 		      </a>
 		    </div>		
 			
 			<div class=" navbar-right r">
 			    	<div class="row">
 			    		
-			    		<a href="room.html" class="btn btn-success">Room list</a>
-						<a href="roomtype.html" class="btn btn-success">Room Type</a>
+			    		<a href="room.jsp" class="btn btn-success">Room list</a>
+						<a href="roomtype.jsp" class="btn btn-success">Room Type</a>
 			    		<a href="#" class="btn btn-success">Hotel packages</a>
 
 			    	</div>    	
@@ -112,8 +47,9 @@
 		<div class=" thumbnail">
 		<table  class="table table-hover">
 			<thead>
-				<th>Type name</th>
+				<th>Number</th>
 				<th>Description</th>
+				<th>Group name</th>
 				<th>Bed(SB)</th>
 				<th>Bed(DB)</th>
 				<th>Extra beds</th>
@@ -123,8 +59,9 @@
 			</thead>
 		
 			<tr>
-				<td>Double/Twin room - Standard</td>		
+				<td>001</td>		
 				<td>Double/Twin room - Standard</td>
+				<td> - </td>
 				<td>2</td>
 				<td>1</td>
 				<td>1</td>
@@ -134,8 +71,9 @@
 				<td><a href="#"data-toggle="modal" data-target="#editCus1"><i class="glyphicon glyphicon-pencil"></i>Edit</a></td>	
 			</tr>
 			<tr>
-				<td>Single room/td>		
+				<td>002</td>		
 				<td>Single room</td>
+				<td> - </td>
 				<td>0</td>
 				<td>2</td>
 				<td>0</td>
@@ -145,7 +83,32 @@
 				
 				<td><a href="#"data-toggle="modal" data-target="#editCus1"><i class="glyphicon glyphicon-pencil"></i>Edit</a></td>	
 			</tr>
-			
+			<tr>
+				<td>003</td>		
+				<td>Single room deluxe</td>
+				<td> - </td>
+				<td>1</td>
+				<td>1</td>
+				<td>0</td>
+				<td>25$</td>
+				<td>10$</td>				
+				
+				
+				<td><a href="#"data-toggle="modal" data-target="#editCus1"><i class="glyphicon glyphicon-pencil"></i>Edit</a></td>	
+			</tr>
+			<tr>
+				<td>004</td>		
+				<td>Double room Deluxe</td>
+				<td> - </td>
+				<td>2</td>
+				<td>2</td>
+				<td>0</td>
+				<td>50$</td>
+				<td>20$</td>				
+				
+				
+				<td><a href="#"data-toggle="modal" data-target="#editCus1"><i class="glyphicon glyphicon-pencil"></i>Edit</a></td>	
+			</tr>
 		</table>
 		</div>
 
@@ -155,94 +118,30 @@
 		    <div class="modal-content">
 		      <div class="modal-header  alert-info">
 		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		        <h4 class="modal-title" id="myModalLabel">Add new type room<small> Room information</small></h4>
+		        <h4 class="modal-title" id="myModalLabel">Add new room<small> Room information</small></h4>
 		      </div>
 		      <div class="modal-body ">
 		      	<div class="row">
-				  	<div class="col-md-3 text-right">Room Type </div>
+				  	<div class="col-md-3 text-right">Room number </div>
 				  	<div class="col-md-4"><input type="text" class="form-control"/></div> 
-				  		
-			  	</div>
-			  	<br />
-			  	<div class="row">
-			  <div class="col-md-1"></div>
-			    <div class="col-md-10">
-			  	<div class="row thumbnail alert-success">
-			  		<h5 ><b>Number of beds</b></h5>
-				  	<div class="col-md-2 text-right">Single(SB)</div>
-				  	<div class="col-md-2"><input type="text" class="form-control"/></div> 
-				  	<div class="col-md-2 text-right">Double(DB) </div>
-				  	<div class="col-md-2"><input type="email" class="form-control"/></div>  	
-				  	<div class="col-md-2 text-right">Extra beds </div>
-				  	<div class="col-md-2"><input type="email" class="form-control"/></div>  					  			
-			  	</div>		  	
-			  	</div>
-			  	
+				  	<div class="col-md-1 text-right">Floor </div>
+				  	<div class="col-md-3">
+						<select class="form-control"> 
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+						</select>
+					</div>  			
 			  	</div>
 			  	<div class="row">
-			  	<div class="col-md-1"></div>
-				    <div class="col-md-10">
-					  	<div class="row thumbnail  alert-success">
-					  		<h5 ><b>Description</b></h5>
-					  		<textarea class="form-control"></textarea>		
-					  	</div>	
-				  	</div>
-			  	</div>	
-			  	<div class="row">
-			  	<div class="col-md-1"></div>
-				    <div class="col-md-10 thumbnail  alert-success">	
-					  	
-					  		<h5 ><b>Room rate and payment type</b></h5>
-					  		<div class="row">
-						  		<div class="col-md-8"><input type="radio" name="pay_type" /> Rate per room - regardless of the number of people accommodated </div>
-						  		<div class=" col-md-2">
-						  		<input type="text" class="form-control" />
-						  		<br>
-					  		</div>
-					  		<br />	  		
-					  		</div>
-					  		<div class="thumbnail">
-					  		<div class="row">
-					  		<div class="col-md-8"><input type="radio" name="pay_type" /> Rate per person - Depends on the number of people accommodated </div>
-					  		</div>
-					  		<br>
-					  		<div class="row">
-						  		<div class="col-md-3">Rate per adult </div>
-						  		<div class=" col-md-2">
-						  			<input type="text" class="form-control" />
-					  			</div>
-					  		</div>
-					  		<div class="row">
-						  		<div class="col-md-3"> Child </div>
-						  		<div class=" col-md-2">
-						  			<input type="text" class="form-control" />
-					  			</div>
-					  		</div>				
-					  		</div>
-				  	</div>
-			  	</div>	
-		      </div>
-		      <div class="modal-footer   alert-info">
-		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		        <button type="button" class="btn btn-primary">Save changes</button>
-		      </div>
-		    </div>
-		  </div>
-		</div>
-		<!------------------------------------------------------------modal add customer------------------------------------------------>
-		<!------------------------------------------------------------modal edit customer------------------------------------------------>
-		<div class="modal fade" id="editCus1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		    <div class="modal-dialog modal-lg">
-		    <div class="modal-content">
-		      <div class="modal-header   alert-success">
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		        <h4 class="modal-title" id="myModalLabel">Add new type room<small> Room information</small></h4>
-		      </div>
-		      <div class="modal-body ">
-		      	<div class="row">
-				  	<div class="col-md-3 text-right">Room Type </div>
-				  	<div class="col-md-4"><input type="text" class="form-control"/></div> 
-				  		
+				  	<div class="col-md-3 text-right">Room Type</div>
+				  	<div class="col-md-4">
+				  		<select class="form-control">
+							<option>---- Not assigned ----</option>
+							
+						</select>
+				  	</div>  			
 			  	</div>
 			  	<br />
 			  	<div class="row">
@@ -303,7 +202,105 @@
 				  	</div>
 			  	</div>	
 		      </div>
-		      <div class="modal-footer   alert-success">
+		      <div class="modal-footer  alert-info">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!------------------------------------------------------------modal add customer------------------------------------------------>
+		<!------------------------------------------------------------modal edit customer------------------------------------------------>
+		<div class="modal fade" id="editCus1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-lg">
+		    <div class="modal-content">
+		      <div class="modal-header  alert-info">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Edit room<small> Room information</small></h4>
+		      </div>
+		      <div class="modal-body ">
+		      	<div class="row">
+				  	<div class="col-md-3 text-right">Room number </div>
+				  	<div class="col-md-4"><input type="text" class="form-control"/></div> 
+				  	<div class="col-md-1 text-right">Floor </div>
+				  	<div class="col-md-3">
+						<select class="form-control"> 
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+						</select>
+					</div>  			
+			  	</div>
+			  	<div class="row">
+				  	<div class="col-md-3 text-right">Room Type</div>
+				  	<div class="col-md-4">
+				  		<select class="form-control">
+							<option>---- Not assigned ----</option>
+							
+						</select>
+				  	</div>  			
+			  	</div>
+			  	<br />
+			  	<div class="row">
+			  <div class="col-md-1"></div>
+			    <div class="col-md-10">
+			  	<div class="row thumbnail alert-warning">
+			  		<h5 ><b>Number of beds</b></h5>
+				  	<div class="col-md-2 text-right">Single(SB)</div>
+				  	<div class="col-md-2"><input type="text" class="form-control"/></div> 
+				  	<div class="col-md-2 text-right">Double(DB) </div>
+				  	<div class="col-md-2"><input type="email" class="form-control"/></div>  	
+				  	<div class="col-md-2 text-right">Extra beds </div>
+				  	<div class="col-md-2"><input type="email" class="form-control"/></div>  					  			
+			  	</div>		  	
+			  	</div>
+			  	
+			  	</div>
+			  	<div class="row">
+			  	<div class="col-md-1"></div>
+				    <div class="col-md-10">
+					  	<div class="row thumbnail alert-warning">
+					  		<h5 ><b>Description</b></h5>
+					  		<textarea class="form-control"></textarea>		
+					  	</div>	
+				  	</div>
+			  	</div>	
+			  	<div class="row">
+			  	<div class="col-md-1"></div>
+				    <div class="col-md-10 thumbnail alert-warning">	
+					  	
+					  		<h5 ><b>Room rate and payment type</b></h5>
+					  		<div class="row">
+						  		<div class="col-md-8"><input type="radio" name="pay_type" /> Rate per room - regardless of the number of people accommodated </div>
+						  		<div class=" col-md-2">
+						  		<input type="text" class="form-control" />
+						  		<br>
+					  		</div>
+					  		<br />	  		
+					  		</div>
+					  		<div class="thumbnail">
+					  		<div class="row">
+					  		<div class="col-md-8"><input type="radio" name="pay_type" /> Rate per person - Depends on the number of people accommodated </div>
+					  		</div>
+					  		<br>
+					  		<div class="row">
+						  		<div class="col-md-3">Rate per adult </div>
+						  		<div class=" col-md-2">
+						  			<input type="text" class="form-control" />
+					  			</div>
+					  		</div>
+					  		<div class="row">
+						  		<div class="col-md-3"> Child </div>
+						  		<div class=" col-md-2">
+						  			<input type="text" class="form-control" />
+					  			</div>
+					  		</div>				
+					  		</div>
+				  	</div>
+			  	</div>	
+		      </div>
+		      <div class="modal-footer  alert-info">
 		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 		        <button type="button" class="btn btn-primary">Save changes</button>
 		      </div>
@@ -312,6 +309,9 @@
 		</div>
 		<!------------------------------------------------------------modal edit customer------------------------------------------------>
 		</div>
+		
+		
+		
 		
 		<footer class="text-center thumbnail">
 			Smart-Hotel.com 
