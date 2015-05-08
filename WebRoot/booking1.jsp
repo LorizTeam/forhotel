@@ -23,16 +23,21 @@
 		<html:form action="/booking1">
 		<div class="col-md-10 thumbnail frm">
 		<% 
-		String date_check_in = "",date_check_out = "",people_booking = "";
+		String date_check_in = "",date_check_out = "",people_booking = "",alrmessage="",
+		checkroom = "0";
 		if ( session != null){
 			date_check_in = (String) session.getAttribute("tcheck_in");
 			date_check_out = (String) session.getAttribute("tcheck_out");
 			people_booking = (String) session.getAttribute("gues_amount");
+			checkroom = (String) session.getAttribute("checkroom");
+
 		}
-		
+		if (checkroom == "1"){
+			alrmessage = "Room not empty in your pick date";
+		}
 		 %>
 			
-			<h1>Hotel.com | Booking</h1>
+			<h1>Hotel.com | Booking <%=alrmessage %></h1>
 				<ul class="nav nav-tabs nav-justified text-center">
 					<li class="active"><a href="#">Choose a room</a></li>
 					<li class="disabled"><a href="#">Enhance your stay</a></li>
