@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/index.do" location="45,75" dimension="229,96" />
+  <StrutsActivity path="/indexStart.do" location="465,75" dimension="253,96" />
+  <StrutsActivity path="/booking1.do" location="765,90" dimension="251,96" />
+  <StrutsActivity path="/booking2.do" location="90,315" dimension="251,96" />
+  <StrutsActivity path="/booking3.do" location="735,435" dimension="251,96" />
+  <StrutsActivity path="/detailbooking.do" location="30,570" dimension="275,96" />
+  <StrutsActivity path="/employee.do" location="345,735" dimension="253,96" />
+  <StrutsActivity path="/empoverview.do" location="705,870" dimension="272,96" />
+  <StrutsActivity path="/cuswalkin.do" location="45,885" dimension="255,96" />
+  <StrutsActivity path="/cusphonebook.do" location="45,1020" dimension="282,96" />
+  <StrutsActivity path="/cuscheckin.do" location="1035,660" dimension="262,96" />
+  <StrutsActivity path="/cuscheckout.do" location="705,1065" dimension="270,96" />
+  <StrutsActivity path="/paypal.do" location="585,585" dimension="236,96" />
+  <StrutsActivity path="/index.jsp" location="300,225" dimension="81,51" />
+  <StrutsActivity path="/room_not_empty.jsp" location="1065,225" dimension="144,51" />
+  <StrutsActivity path="/booking2.jsp" location="525,315" dimension="103,51" />
+  <StrutsActivity path="booking1.jsp" location="1095,105" dimension="98,51" />
+  <StrutsActivity path="/booking3.jsp" location="390,435" dimension="103,51" />
+  <StrutsActivity path="/paypal.jsp" location="900,585" dimension="88,51" />
+  <StrutsActivity path="/detailbooking.jsp" location="375,600" dimension="126,51" />
+  <StrutsActivity path="/employee/index1.jsp" location="50,750" dimension="144,51" />
+  <StrutsActivity path="/employee/empoverview.jsp" location="705,750" dimension="181,51" />
+  <StrutsActivity path="/employee/cuswalkin.jsp" location="390,900" dimension="162,51" />
+  <StrutsActivity path="/employee/cuscheckin.jsp" location="1080,855" dimension="169,51" />
+  <StrutsActivity path="/employee/cusphonebook.jsp" location="390,1035" dimension="189,51" />
+  <StrutsActivity path="/employee/cuscheckout.jsp" location="1035,1080" dimension="177,51" />
+  <StrutsTransition id="/booking3.jsp,null,/booking3.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="493,460" />
+      <AbsolutePoint location="735,460" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/booking3.do,booking_success,/paypal.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="944,531" />
+      <AbsolutePoint location="944,585" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empoverview.do,cuscheckin,/employee/cuscheckin.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="977,885" />
+      <AbsolutePoint location="1080,885" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/employee/cuswalkin.jsp,null,/cuswalkin.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="390,933" />
+      <AbsolutePoint location="300,933" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.jsp,null,/index.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="300,250" />
+      <AbsolutePoint location="159,250" />
+      <AbsolutePoint location="159,171" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/booking1.do,room_not_empty,/room_not_empty.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="920,186" />
+      <AbsolutePoint location="920,250" />
+      <AbsolutePoint location="1065,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/booking2.do,to_booking,/booking3.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="215,411" />
+      <AbsolutePoint location="215,460" />
+      <AbsolutePoint location="390,460" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/employee.do,success,/employee/empoverview.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="598,775" />
+      <AbsolutePoint location="705,775" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/paypal.jsp,null,/paypal.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="900,610" />
+      <AbsolutePoint location="821,610" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/booking2.jsp,null,/booking2.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="525,340" />
+      <AbsolutePoint location="341,340" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/employee/index1.jsp,null,/employee.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="122,801" />
+      <AbsolutePoint location="122,846" />
+      <AbsolutePoint location="471,846" />
+      <AbsolutePoint location="471,831" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empoverview.do,cuswalkin,/employee/cuswalkin.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="705,925" />
+      <AbsolutePoint location="552,925" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/employee/cuscheckin.jsp,null,/cuscheckin.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1166,855" />
+      <AbsolutePoint location="1166,756" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/employee/cuscheckout.jsp,null,/cuscheckout.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1035,1113" />
+      <AbsolutePoint location="975,1113" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/paypal.do,false,/paypal.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="821,651" />
+      <AbsolutePoint location="944,651" />
+      <AbsolutePoint location="944,636" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="booking1.jsp,null,/booking1.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1095,138" />
+      <AbsolutePoint location="1016,138" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/paypal.do,success,/detailbooking.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="585,625" />
+      <AbsolutePoint location="501,625" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/detailbooking.jsp,null,/detailbooking.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="375,618" />
+      <AbsolutePoint location="305,618" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/employee.do,false,/employee/index1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="345,775" />
+      <AbsolutePoint location="194,775" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empoverview.do,cusphonebook,/employee/cusphonebook.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="841,966" />
+      <AbsolutePoint location="841,1050" />
+      <AbsolutePoint location="579,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empoverview.do,cuscheckout,/employee/cuscheckout.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="977,921" />
+      <AbsolutePoint location="1123,921" />
+      <AbsolutePoint location="1123,1080" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/employee/empoverview.jsp,null,/empoverview.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="841,801" />
+      <AbsolutePoint location="841,870" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/employee/cusphonebook.jsp,null,/cusphonebook.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="484,1086" />
+      <AbsolutePoint location="484,1101" />
+      <AbsolutePoint location="327,1101" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/booking1.do,roomempty,/booking2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="890,186" />
+      <AbsolutePoint location="890,340" />
+      <AbsolutePoint location="628,340" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/indexStart.do,success,/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="591,171" />
+      <AbsolutePoint location="591,250" />
+      <AbsolutePoint location="381,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

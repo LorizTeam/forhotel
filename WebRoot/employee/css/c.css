@@ -1,0 +1,88 @@
+body{
+	color:black;
+}
+.c {
+	color:  white !important;
+	background:#996633;
+	padding:12px 20px;
+}
+.c:hover {
+	color: white;
+	background: #805A36;
+}
+.menu-in{
+	padding: 20px;
+}
+.bg{
+	width:95%;
+	background:#805A36;
+	margin-bottom: 20px;
+	padding:0px 0px 20px;
+	position:relative;
+}
+
+.fix{
+	background: none repeat scroll 0 0 #fff;
+    height: 130px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+.fix a{
+	color:  #805A36;
+}
+.welcome span{
+	padding-bottom:15px;
+	border-bottom: 1px dashed white;
+	
+}
+.welcome h2{
+	margin-bottom:40px;
+}
+.welcome p{
+	margin-bottom:20px;
+}
+#gallery article{
+	padding:20px 15px 0px;
+}
+#map{
+	padding:20px;
+	margin-top:20px;
+}
+.bbg{
+	background-color: rgba(0,0,0,0.6);
+	color:black;
+	padding:40px;
+}
+.radius{
+	border-radius: 4px!important;
+	
+}
+.frm{
+	padding:40px 40px 10px !important;
+}
+.frmbg{
+	background-color: rgba(0,0,0,0.1);
+	padding:20px;
+}
+.footer{
+	margin-top:40px;
+}
+.receiv{
+	background-image: -webkit-gradient(linear, top,bottom, from(#19A3D1), to(#A3E0FF));
+	background-image: -moz-linear-gradient(top, #19A3D1, #A3E0FF);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#19A3D1), to(#A3E0FF));
+	border-bottom: solid 5px #80F2F2;
+	margin-bottom:0px !important;
+}
+.bgc{
+	background-color: #F1F2F3;
+}
+.bgb{
+	background-color: #000000 !important;
+}
+.w{
+	color: white;
+}

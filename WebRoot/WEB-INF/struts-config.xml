@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans >
+    <form-bean name="indexForm" type="com.smict.struts.form.IndexForm" />
+    <form-bean name="booking1Form" type="com.smict.struts.form.Booking1Form" />
+    <form-bean name="booking2Form" type="com.smict.struts.form.Booking2Form" />
+    <form-bean name="booking3Form" type="com.smict.struts.form.Booking3Form" />
+    <form-bean name="detailbookingForm" type="com.smict.struts.form.DetailbookingForm" />
+    <form-bean name="employeeForm" type="com.smict.struts.form.EmployeeForm" />
+    <form-bean name="empoverviewForm" type="com.smict.struts.form.EmpoverviewForm" />
+    <form-bean name="cuswalkinForm" type="com.smict.struts.form.CuswalkinForm" />
+    <form-bean name="cusphonebookForm" type="com.smict.struts.form.CusphonebookForm" />
+    <form-bean name="cuscheckinForm" type="com.smict.struts.form.CuscheckinForm" />
+    <form-bean name="cuscheckoutForm" type="com.smict.struts.form.CuscheckoutForm" />
+    <form-bean name="paypalForm" type="com.smict.struts.form.PaypalForm" />
+    
+
+  </form-beans>
+
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+     
+    
+    <action
+      attribute="indexForm"
+      input="/index.jsp"
+      name="indexForm"
+      path="/index"
+      scope="request"
+      type="com.smict.struts.action.IndexAction">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action path="/indexStart" type="com.smict.struts.action.IndexStartAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="success" path="/index.jsp" />
+    </action>
+    <action
+      attribute="booking1Form"
+      input="booking1.jsp"
+      name="booking1Form"
+      path="/booking1"
+      scope="request"
+      type="com.smict.struts.action.Booking1Action">
+      <set-property property="cancellable" value="true" />
+      
+      <forward name="room_not_empty" path="/room_not_empty.jsp" />
+      <forward name="roomempty" path="/booking2.jsp" />
+    </action>
+    <action
+      attribute="booking2Form"
+      input="/booking2.jsp"
+      name="booking2Form"
+      path="/booking2"
+      scope="request"
+      type="com.smict.struts.action.Booking2Action">
+      <set-property property="cancellable" value="true" />
+      <forward name="to_booking" path="/booking3.jsp" />
+
+    </action>
+    <action
+      attribute="booking3Form"
+      input="/booking3.jsp"
+      name="booking3Form"
+      path="/booking3"
+      scope="request"
+      type="com.smict.struts.action.Booking3Action">
+      <set-property property="cancellable" value="true" />
+      <forward name="booking_success" path="/paypal.jsp" />
+      
+    </action>
+    <action
+      attribute="detailbookingForm"
+      input="/detailbooking.jsp"
+      name="detailbookingForm"
+      path="/detailbooking"
+      scope="request"
+      type="com.smict.struts.action.DetailbookingAction">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="employeeForm"
+      input="/employee/index1.jsp"
+      name="employeeForm"
+      path="/employee"
+      scope="request"
+      type="com.smict.struts.action.EmployeeAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="success" path="/employee/empoverview.jsp" />
+      <forward name="false" path="/employee/index1.jsp" />
+    </action>
+    <action
+      attribute="empoverviewForm"
+      input="/employee/empoverview.jsp"
+      name="empoverviewForm"
+      path="/empoverview"
+      scope="request"
+      type="com.smict.struts.action.EmpoverviewAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="cuswalkin" path="/employee/cuswalkin.jsp" />
+      <forward name="cusphonebook" path="/employee/cusphonebook.jsp" />
+      <forward name="cuscheckin" path="/employee/cuscheckin.jsp" />
+      <forward name="cuscheckout" path="/employee/cuscheckout.jsp" />
+    </action>
+    <action
+      attribute="cuswalkinForm"
+      input="/employee/cuswalkin.jsp"
+      name="cuswalkinForm"
+      path="/cuswalkin"
+      scope="request"
+      type="com.smict.struts.action.CuswalkinAction">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="cusphonebookForm"
+      input="/employee/cusphonebook.jsp"
+      name="cusphonebookForm"
+      path="/cusphonebook"
+      scope="request"
+      type="com.smict.struts.action.CusphonebookAction">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="cuscheckinForm"
+      input="/employee/cuscheckin.jsp"
+      name="cuscheckinForm"
+      path="/cuscheckin"
+      scope="request"
+      type="com.smict.struts.action.CuscheckinAction">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="cuscheckoutForm"
+      input="/employee/cuscheckout.jsp"
+      name="cuscheckoutForm"
+      path="/cuscheckout"
+      scope="request"
+      type="com.smict.struts.action.CuscheckoutAction">
+      <set-property property="cancellable" value="true" />
+    </action>
+    <action
+      attribute="paypalForm"
+      input="/paypal.jsp"
+      name="paypalForm"
+      path="/paypal"
+      scope="request"
+      type="com.smict.struts.action.PaypalAction">
+      <set-property property="cancellable" value="true" />
+      <forward name="success" path="/detailbooking.jsp" />
+      <forward name="false" path="/paypal.jsp" />
+      
+    </action>
+    
+    
+    
+
+  </action-mappings>
+
+  <message-resources parameter="com.smict.struts.ApplicationResources" />
+</struts-config>
+
