@@ -52,7 +52,7 @@
 							<div class="col-md-4 text-right pad"><strong>Bedding:</strong></div>
 							<div class="col-md-8 pad">
 							<%=roomtype_single_bed %>x Single bed | 
-							<%=roomtype_double_bed  %>X Double bed</div>
+							<%=roomtype_double_bed  %>x Double bed</div>
 						</div>
 						
 						<div class="row">

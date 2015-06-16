@@ -51,7 +51,7 @@ public class Booking3Action extends Action {
 		check_in = (String) session.getAttribute("tcheck_in"),
 		check_out = (String) session.getAttribute("tcheck_out"),
 		guest_amount = (String) session.getAttribute("guest_amount"),
-		
+		roomtype_name = request.getParameter("roomtype_name"),
 		cus_tit_name = booking3Form.getTitle(),
 		cus_name_sure = booking3Form.getName_sure(),
 		cus_email = booking3Form.getEmail(),
@@ -88,7 +88,7 @@ public class Booking3Action extends Action {
 		session.setAttribute("roomtype_double_bed", roomtype_double_bed);
 		session.setAttribute("price_total", price_total);
 		session.setAttribute("roomtype_picpath", roomtype_picpath);
-		
+		session.setAttribute("roomtype_name", roomtype_name);
 		try {
 			booking_id = bk3dt.booking_table(room_id,check_in,check_out,cus_tit_name,cus_name_sure,cus_email,cus_intercode,cus_phonenum,cus_country);
 			
